@@ -1,0 +1,26 @@
+D:\Projects\VisualStudio2019\c#\winform\WindowsFormsApp1\bin\x64\Debug\WindowsFormsApp1.exe.config
+D:\Projects\VisualStudio2019\c#\winform\WindowsFormsApp1\bin\x64\Debug\WindowsFormsApp1.exe
+D:\Projects\VisualStudio2019\c#\winform\WindowsFormsApp1\bin\x64\Debug\WindowsFormsApp1.pdb
+D:\Projects\VisualStudio2019\c#\winform\WindowsFormsApp1\obj\x64\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
+D:\Projects\VisualStudio2019\c#\winform\WindowsFormsApp1\obj\x64\Debug\WindowsFormsApp1.Form1.resources
+D:\Projects\VisualStudio2019\c#\winform\WindowsFormsApp1\obj\x64\Debug\WindowsFormsApp1.Properties.Resources.resources
+D:\Projects\VisualStudio2019\c#\winform\WindowsFormsApp1\obj\x64\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+D:\Projects\VisualStudio2019\c#\winform\WindowsFormsApp1\obj\x64\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+D:\Projects\VisualStudio2019\c#\winform\WindowsFormsApp1\obj\x64\Debug\WindowsFormsApp1.exe
+D:\Projects\VisualStudio2019\c#\winform\WindowsFormsApp1\obj\x64\Debug\WindowsFormsApp1.pdb
+D:\Projects\VisualStudio2019\c#\winform\WindowsFormsApp1\bin\x64\Debug\Newtonsoft.Json.dll
+D:\Projects\VisualStudio2019\c#\winform\WindowsFormsApp1\bin\x64\Debug\Newtonsoft.Json.xml
+D:\Projects\VisualStudio2019\c#\winform\WindowsFormsApp1\obj\x64\Debug\WindowsFormsApp1.csproj.CopyComplete
+D:\Projects\c#\visual studio 2019\winform\WindowsFormsApp1\bin\x64\Debug\WindowsFormsApp1.exe.config
+D:\Projects\c#\visual studio 2019\winform\WindowsFormsApp1\bin\x64\Debug\WindowsFormsApp1.exe
+D:\Projects\c#\visual studio 2019\winform\WindowsFormsApp1\bin\x64\Debug\WindowsFormsApp1.pdb
+D:\Projects\c#\visual studio 2019\winform\WindowsFormsApp1\bin\x64\Debug\Newtonsoft.Json.dll
+D:\Projects\c#\visual studio 2019\winform\WindowsFormsApp1\bin\x64\Debug\Newtonsoft.Json.xml
+D:\Projects\c#\visual studio 2019\winform\WindowsFormsApp1\obj\x64\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
+D:\Projects\c#\visual studio 2019\winform\WindowsFormsApp1\obj\x64\Debug\WindowsFormsApp1.Form1.resources
+D:\Projects\c#\visual studio 2019\winform\WindowsFormsApp1\obj\x64\Debug\WindowsFormsApp1.Properties.Resources.resources
+D:\Projects\c#\visual studio 2019\winform\WindowsFormsApp1\obj\x64\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+D:\Projects\c#\visual studio 2019\winform\WindowsFormsApp1\obj\x64\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+D:\Projects\c#\visual studio 2019\winform\WindowsFormsApp1\obj\x64\Debug\WindowsFormsApp1.csproj.CopyComplete
+D:\Projects\c#\visual studio 2019\winform\WindowsFormsApp1\obj\x64\Debug\WindowsFormsApp1.exe
+D:\Projects\c#\visual studio 2019\winform\WindowsFormsApp1\obj\x64\Debug\WindowsFormsApp1.pdb

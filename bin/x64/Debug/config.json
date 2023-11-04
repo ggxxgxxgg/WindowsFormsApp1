@@ -1,0 +1,22 @@
+{
+  "OSCF": 3,
+  "PRTRM": 7,
+  "VTST": 48,
+  "BGST": 48,
+  "CBRG": 33,
+  "CZRO": 0,
+  "CVGA": 0,
+  "FVGA": 0,
+  "LFBW": 3,
+  "TCMP": 0,
+  "OPHS": 0,
+  "SOEN": 0,
+  "TICACEN": 1,
+  "TP2IEN": 1,
+  "TC2VOEN": 1,
+  "TPGA": 7,
+  "TLPFIEN": 1,
+  "ORDER_S": "1",
+  "ORDER_A": "1",
+  "YMW": 20231025
+}

@@ -1,0 +1,10 @@
+D:\Projects\VisualStudio2019\c#\winform\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+D:\Projects\VisualStudio2019\c#\winform\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+D:\Projects\VisualStudio2019\c#\winform\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+D:\Projects\VisualStudio2019\c#\winform\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
+D:\Projects\VisualStudio2019\c#\winform\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+D:\Projects\VisualStudio2019\c#\winform\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+D:\Projects\VisualStudio2019\c#\winform\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+D:\Projects\VisualStudio2019\c#\winform\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+D:\Projects\VisualStudio2019\c#\winform\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+D:\Projects\VisualStudio2019\c#\winform\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
