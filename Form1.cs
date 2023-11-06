@@ -149,8 +149,8 @@ namespace WindowsFormsApp1
                 MessageBox.Show("未选择设备", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
+            btn_OPT_NOW_Click(null, null);
             Byte AddresToRead = Convert.ToByte(textBoxReadRegAddress.Text,16);
-            
             write_buffer[0] = AddresToRead;
             int ret = ControlSPI.VSI_WriteReadBytes(ControlSPI.VSI_USBSPI, DevIndex, 0, write_buffer, 1, read_buffer, 1);
             if (ret != ControlSPI.ERROR.SUCCESS)
@@ -168,7 +168,6 @@ namespace WindowsFormsApp1
         private void button_ClearRichTextBox_Click(object sender, EventArgs e)
         {
             richTextBox1.Clear();
-            ShowRegValue();
         }
 
         /// <summary>
@@ -815,6 +814,11 @@ namespace WindowsFormsApp1
 
         private void ReadRegAll()
         {
+            if (DevIndex == -1)
+            {
+                MessageBox.Show("未选择设备", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
             btn_OPT_NOW_Click(null, null);
             write_buffer[0] = 0x80;
             int ret = ControlSPI.VSI_WriteReadBytes(ControlSPI.VSI_USBSPI, DevIndex, 0, write_buffer, 1, read_buffer, 0x1f);
