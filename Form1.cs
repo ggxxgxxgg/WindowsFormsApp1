@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -168,6 +168,7 @@ namespace WindowsFormsApp1
         private void button_ClearRichTextBox_Click(object sender, EventArgs e)
         {
             richTextBox1.Clear();
+            ShowRegValue();
         }
 
         /// <summary>
