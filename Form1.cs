@@ -116,12 +116,13 @@ namespace WindowsFormsApp1
                 MessageBox.Show("未选择设备", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
+            btn_OPT_NOW_Click(null, null);
             UInt16 ReadLen = Convert.ToUInt16(textBox1.Text);
             write_buffer[0] = 0x80;
             int ret = ControlSPI.VSI_WriteReadBytes(ControlSPI.VSI_USBSPI, DevIndex, 0, write_buffer, 1, read_buffer, ReadLen);
             if (ret != ControlSPI.ERROR.SUCCESS)
             {
-                MessageBox.Show("SPI VSI_WriteReadBytes 错误", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("SPI VSI_WriteReadBytes", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             else
@@ -155,7 +156,7 @@ namespace WindowsFormsApp1
             int ret = ControlSPI.VSI_WriteReadBytes(ControlSPI.VSI_USBSPI, DevIndex, 0, write_buffer, 1, read_buffer, 1);
             if (ret != ControlSPI.ERROR.SUCCESS)
             {
-                MessageBox.Show("SPI写数据错误", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("SPI写数据", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             else
