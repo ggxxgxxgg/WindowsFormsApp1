@@ -42,7 +42,7 @@ namespace WindowsFormsApp1
         }
         public Int16 Opt_b = (short)OPT_BLOCK.B_00_7F;
 
-        public Byte[] reg = new Byte[31];
+        public Byte[] reg = new Byte[32];
         public UInt16 OSCF;//0~15
         public UInt16 PRTRM;//0~15
         public UInt16 VTST;//0~63

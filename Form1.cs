@@ -37,7 +37,7 @@ namespace WindowsFormsApp1
             comboBox7.SelectedIndex = 0;
             comboBox8.SelectedIndex = 0;
 
-            textBox1.Text = "10";
+            textBox1.Text = "32";
             textBoxReadRegAddress.Text = "00";
             init_cBox_config();
         }
@@ -162,7 +162,7 @@ namespace WindowsFormsApp1
                 MessageBox.Show("未选择设备", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            Byte AddresToRead = Convert.ToByte(textBoxReadRegAddress.Text.ToString(),16);
+            Byte AddresToRead = Convert.ToByte(textBoxReadRegAddress.Text,16);
             //Console.WriteLine(Convert.ToString(AddresToRead, 2).PadLeft(8, '0'));
             //Console.WriteLine(AddresToRead.ToString("X2"));
             write_buffer[0] = 0x00;
@@ -187,6 +187,7 @@ namespace WindowsFormsApp1
         private void button_ClearRichTextBox_Click(object sender, EventArgs e)
         {
             richTextBox1.Clear();
+            ShowRegValue();
         }
 
         /// <summary>
@@ -281,16 +282,16 @@ namespace WindowsFormsApp1
             }
             cBox_config_OSCF.SelectedIndex = 3;
             cBox_config_PRTRM.SelectedIndex = 7;
-            cBox_config_VTST.SelectedIndex = 48;
-            cBox_config_BGST.SelectedIndex = 48;
-            cBox_config_CBRG.SelectedIndex = 33;
+            cBox_config_VTST.SelectedIndex = 39;
+            cBox_config_BGST.SelectedIndex = 50;
+            cBox_config_CBRG.SelectedIndex = 64;
             cBox_config_CZRO.SelectedIndex = 0;
-            cBox_config_CVGA.SelectedIndex = 0;
-            cBox_config_FVGA.SelectedIndex = 0;
-            cBox_config_LFBW.SelectedIndex = 3;
-            cBox_config_TCMP.SelectedIndex = 0;
+            cBox_config_CVGA.SelectedIndex = 8;
+            cBox_config_FVGA.SelectedIndex = 276;
+            cBox_config_LFBW.SelectedIndex = 4;
+            cBox_config_TCMP.SelectedIndex = 50;
             cBox_config_OPHS.SelectedIndex = 0;
-            cBox_config_SOEN.SelectedIndex = 0;
+            cBox_config_SOEN.SelectedIndex = 1;
 
             cBox_config_TICACEN.SelectedIndex = 0;
             cBox_config_TP2IEN.SelectedIndex = 0;
@@ -298,9 +299,9 @@ namespace WindowsFormsApp1
             cBox_config_TPGA.SelectedIndex = 0;
             cBox_config_TLPFIEN.SelectedIndex = 0;
 
-            textBox_OrderS.Text = "1";
-            textBox_OrderA.Text = "1";
-            textBox_YMW.Text = "20231025";
+            textBox_OrderS.Text = "ffffffff";
+            textBox_OrderA.Text = "ffffffff";
+            textBox_YMW.Text = "20240101";
         }
         
         /// <summary>
@@ -431,32 +432,33 @@ namespace WindowsFormsApp1
         {
             write_buffer[0] = 0x00;
             write_buffer[1] = 0x80;
-            write_buffer[2] = 0x80;
-            int ret = ControlSPI.VSI_WriteReadBytes(ControlSPI.VSI_USBSPI, DevIndex, 0, write_buffer, 3,read_buffer,127);
-            int readAddress = 0;
+            //write_buffer[2] = 0x80;
+            int ret = ControlSPI.VSI_WriteBytes(ControlSPI.VSI_USBSPI, DevIndex, 0, write_buffer, 2);
+            //int ret = ControlSPI.VSI_WriteReadBytes(ControlSPI.VSI_USBSPI, DevIndex, 0, write_buffer, 2,read_buffer,127);
+            //int readAddress = 0;
             if (ret != ControlSPI.ERROR.SUCCESS)
             {
-                MessageBox.Show("读区域选择/OTP LSB(0x00~0x7F) 错误", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("读区域选择/OTP LSB(0x00~0x7F) 错误", "提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             else
             {
                 device.Opt_b = (short)Device.OPT_BLOCK.B_00_7F;
                 richTextBox1.AppendText("\n读区域选择/OTP LSB(0x00~0x7F)\n");
-                for (int i = 0; i < 127; i++)
-                {
-                    richTextBox1.AppendText("地址" + readAddress.ToString("X2") + ":");
-                    richTextBox1.AppendText("0x" + read_buffer[i].ToString("X2"));
-                    if (i % 2 == 0)
-                    {
-                        richTextBox1.AppendText("\n");
-                    }
-                    else
-                    {
-                        richTextBox1.AppendText("\t");
-                    }
-                    readAddress++;
-                }
+                //for (int i = 0; i < 127; i++)
+                //{
+                //    richTextBox1.AppendText("地址" + readAddress.ToString("X2") + ":");
+                //    richTextBox1.AppendText("0x" + read_buffer[i].ToString("X2"));
+                //    if (i % 2 == 0)
+                //    {
+                //        richTextBox1.AppendText("\n");
+                //    }
+                //    else
+                //    {
+                //        richTextBox1.AppendText("\t");
+                //    }
+                //    readAddress++;
+                //}
             }
         }
 
@@ -464,33 +466,33 @@ namespace WindowsFormsApp1
         {
             write_buffer[0] = 0x00;
             write_buffer[1] = 0x81;
-            write_buffer[2] = 0x80;
-            ControlSPI.VSI_WriteBytes(ControlSPI.VSI_USBSPI, DevIndex, 0, write_buffer, 2);
-            int ret = ControlSPI.VSI_WriteReadBytes(ControlSPI.VSI_USBSPI, DevIndex, 0, write_buffer, 3, read_buffer, 127);
-            int readAddress = 128;
+            //write_buffer[2] = 0x80;
+            int ret = ControlSPI.VSI_WriteBytes(ControlSPI.VSI_USBSPI, DevIndex, 0, write_buffer, 2);
+            //int ret = ControlSPI.VSI_WriteReadBytes(ControlSPI.VSI_USBSPI, DevIndex, 0, write_buffer, 2, read_buffer, 127);
+            //int readAddress = 128;
             if (ret != ControlSPI.ERROR.SUCCESS)
             {
-                MessageBox.Show("读区域选择/OTP MSB(0x80~0xFF) 错误", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("读区域选择/OTP MSB(0x80~0xFF) 错误", "提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             else
             {
                 device.Opt_b = (short)Device.OPT_BLOCK.B_80_FF;
                 richTextBox1.AppendText("\n读区域选择/OTP MSB(0x80~0xFF)\n");
-                for (int i = 0; i < 127; i++)
-                {
-                    richTextBox1.AppendText("地址" + readAddress.ToString("X2") + ":");
-                    richTextBox1.AppendText("0x" + read_buffer[i].ToString("X2"));
-                    if (i % 2 == 0)
-                    {
-                        richTextBox1.AppendText("\n");
-                    }
-                    else
-                    {
-                        richTextBox1.AppendText("\t");
-                    }
-                    readAddress++;
-                }
+                //for (int i = 0; i < 127; i++)
+                //{
+                //    richTextBox1.AppendText("地址" + readAddress.ToString("X2") + ":");
+                //    richTextBox1.AppendText("0x" + read_buffer[i].ToString("X2"));
+                //    if (i % 2 == 0)
+                //    {
+                //        richTextBox1.AppendText("\n");
+                //    }
+                //    else
+                //    {
+                //        richTextBox1.AppendText("\t");
+                //    }
+                //    readAddress++;
+                //}
             }
         }
 
@@ -501,14 +503,14 @@ namespace WindowsFormsApp1
             int ret = ControlSPI.VSI_WriteBytes(ControlSPI.VSI_USBSPI, DevIndex, 0, write_buffer, 2);
             if (ret != ControlSPI.ERROR.SUCCESS)
             {
-                MessageBox.Show("读区域选择/当前寄存器 错误", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("读区域选择/当前寄存器 错误", "提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             else
             {
                 device.Opt_b = (short)Device.OPT_BLOCK.B_NOW;
                 richTextBox1.AppendText("\n读区域选择/当前寄存器\n");
-                ReadRegAll();
+                //ReadRegAll();
             }
         }
 
@@ -675,15 +677,15 @@ namespace WindowsFormsApp1
 
         private void SaveConfigValueToReg()
         {
-            int num = ~(0x0F << 4);
-            // 先清除下标为1的元素的[7:4]位，将其设为0
-            device.reg[0] &= (Byte)num;
+            int num = ~(0x07 << 4);
+            // 先清除下标为0的元素的[7:4]位，将其设为0
+            device.reg[1] &= (Byte)num;
             // 然后将数字13左移4位（[7:4]位），并与元素[index]相或，以设置相应的位
-            device.reg[0] |= (Byte)(cBox_config_OSCF.SelectedIndex << 4);
+            device.reg[1] |= (Byte)(cBox_config_OSCF.SelectedIndex << 4);
             
             num = ~(0x0F);
-            device.reg[0] &= (Byte)num;
-            device.reg[0] |= (Byte)cBox_config_PRTRM.SelectedIndex;
+            device.reg[1] &= (Byte)num;
+            device.reg[1] |= (Byte)cBox_config_PRTRM.SelectedIndex;
 
             num = ~(0x3F);
             device.reg[2] &= (Byte)num;
@@ -707,13 +709,13 @@ namespace WindowsFormsApp1
             num = ~(0xF0);
             device.reg[7] &= (Byte)num;
             device.reg[7] |= (Byte)(cBox_config_CVGA.SelectedIndex << 4);
-
             num = ~(0x01);//清除REG05的第0位，将其设为0 0x01 的二进制形式是 00000001
             device.reg[7] &= (Byte)num;
+            device.reg[7] |= (Byte)(cBox_config_FVGA.SelectedIndex >> 8);
+
             num = ~(0xFF);//清除REG06的[7:0]位，将其设为0 0xFF 的二进制形式是 11111111
             device.reg[8] &= (Byte)num;
             num = cBox_config_FVGA.SelectedIndex;
-            device.reg[7] = (Byte)((num & 0x100) >> 8);
             device.reg[8] = (Byte)(num & 0xFF);
 
             num = ~(0x07);
@@ -729,7 +731,7 @@ namespace WindowsFormsApp1
 
             num = ~(1 << 0);
             device.reg[11] &= (Byte)num;
-            num = (Byte)((cBox_config_OPHS.SelectedIndex & 0x01) << 0);
+            num = (Byte)((cBox_config_SOEN.SelectedIndex & 0x01) << 0);
             device.reg[11] |= (Byte)num;
             //0c
             num = ~(1 << 6);
@@ -756,30 +758,33 @@ namespace WindowsFormsApp1
             device.reg[12] &= (Byte)num;
             num = (Byte)((cBox_config_TLPFIEN.SelectedIndex & 0x01) << 0);
             device.reg[12] |= (Byte)num;
+
+            device.reg[13] = 0xff;
+            device.reg[14] = 0xff;
+            device.reg[15] = 0xff;
+
             //10
             string year_s = textBox_YMW.Text.Substring(0, 4);
             int year_n = Convert.ToInt32(year_s);
-            Console.WriteLine($"{year_s}");
+            //Console.WriteLine($"{year_s}");
             num = ~(0xff);
             device.reg[16] &= (Byte)num;//清除
             num = (((year_n /100 / 10) << 4) & 0xF0);//放入年的2023的20
             device.reg[16] |= (Byte)num;
             num = (year_n / 100 % 10);//
             device.reg[16] |= (Byte)num;
-            //Console.WriteLine(device.reg[16]);
-            //Console.WriteLine(device.reg[16].ToString("X2"));
 
-            Console.WriteLine(year_n % 100);
+            //Console.WriteLine(year_n % 100);
             num = ~(0xff);
             device.reg[17] &= (Byte)num;//清除
             num = (((year_n % 100 / 10) << 4) & 0xF0);//放入年的2023的23
-            Console.WriteLine($"num 1:{num}");
+            //Console.WriteLine($"num 1:{num}");
             device.reg[17] |= (Byte)num;
             num = (year_n % 100 % 10);//
-            Console.WriteLine($"num 2:{num}");
+            //Console.WriteLine($"num 2:{num}");
             device.reg[17] |= (Byte)num;
-            Console.WriteLine(device.reg[17]);
-            Console.WriteLine(device.reg[17].ToString("X2"));
+            //Console.WriteLine(device.reg[17]);
+            //Console.WriteLine(device.reg[17].ToString("X2"));
 
             string month_s = textBox_YMW.Text.Substring(4, 2);
             int month_n = Convert.ToInt32(month_s);
@@ -799,25 +804,20 @@ namespace WindowsFormsApp1
             num = (week_n % 10);
             device.reg[19] |= (Byte)num;
 
-            num = Convert.ToInt32(textBox_OrderS.Text);
+            num = Convert.ToInt32(textBox_OrderS.Text, 16);
             device.reg[20] = (byte)(num >> 24); // 获取最高8位
             device.reg[21] = (byte)((num >> 16) & 0xFF); // 获取第二个8位
             device.reg[22] = (byte)((num >> 8) & 0xFF); // 获取第三个8位
             device.reg[23] = (byte)(num & 0xFF); // 获取最低8位
 
-            num = Convert.ToInt32(textBox_OrderA.Text);
+            num = Convert.ToInt32(textBox_OrderA.Text, 16);
             device.reg[24] = (byte)(num >> 24); // 获取最高8位
             device.reg[25] = (byte)((num >> 16) & 0xFF); // 获取第二个8位
             device.reg[26] = (byte)((num >> 8) & 0xFF); // 获取第三个8位
             device.reg[27] = (byte)(num & 0xFF); // 获取最低8位
 
-            //for (int i = 20; i < device.reg.Length; i++)
-            //{
-            //    device.reg[i] = 0xff;
-            //}
-
             richTextBox1.AppendText("\nreg\n");
-            for (int i = 0; i < 0x1f; i++)
+            for (int i = 0; i <= 0x1f; i++)
             {
                 richTextBox1.AppendText("地址" + i.ToString("X2") + ":");
                 richTextBox1.AppendText("0x" + device.reg[i].ToString("X2"));
@@ -881,6 +881,44 @@ namespace WindowsFormsApp1
                 richTextBox1.AppendText("\n读单个寄存器\n");
                 richTextBox1.AppendText("地址" + readAddress.ToString("X2") + ":");
                 richTextBox1.AppendText("0x" + read_buffer[0].ToString("X2"));
+            }
+        }
+
+        private void textBox_OrderS_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // 允许十六进制字符、退格键和删除键
+            if (!Uri.IsHexDigit(e.KeyChar) && e.KeyChar != (char)8 && e.KeyChar != (char)127)
+            {
+                e.Handled = true; // 忽略非十六进制字符
+            }
+        }
+
+        private void textBox_OrderA_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // 允许十六进制字符、退格键和删除键
+            if (!Uri.IsHexDigit(e.KeyChar) && e.KeyChar != (char)8 && e.KeyChar != (char)127)
+            {
+                e.Handled = true; // 忽略非十六进制字符
+            }
+        }
+
+        private void ShowRegValue()
+        {
+            richTextBox1.AppendText("\n读所有寄存器\n");
+            int readAddress = 0;
+            for (int i = 0; i < 0x1f; i++)
+            {
+                richTextBox1.AppendText("地址" + i.ToString("X2") + ":");
+                richTextBox1.AppendText("0x" + device.reg[i].ToString("X2"));
+                if (i % 2 == 0)
+                {
+                    richTextBox1.AppendText("\n");
+                }
+                else
+                {
+                    richTextBox1.AppendText("\t");
+                }
+                readAddress++;
             }
         }
     }

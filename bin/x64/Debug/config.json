@@ -11,12 +11,12 @@
   "TCMP": 0,
   "OPHS": 0,
   "SOEN": 0,
-  "TICACEN": 1,
-  "TP2IEN": 1,
-  "TC2VOEN": 1,
-  "TPGA": 7,
-  "TLPFIEN": 1,
-  "ORDER_S": "1",
+  "TICACEN": 0,
+  "TP2IEN": 0,
+  "TC2VOEN": 0,
+  "TPGA": 0,
+  "TLPFIEN": 0,
+  "ORDER_S": "fff",
   "ORDER_A": "1",
   "YMW": 20231025
 }
