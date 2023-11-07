@@ -116,7 +116,7 @@ namespace WindowsFormsApp1
                 MessageBox.Show("未选择设备", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            btn_OPT_NOW_Click(null, null);
+            //btn_OPT_NOW_Click(null, null);
             UInt16 ReadLen = Convert.ToUInt16(textBox1.Text);
             write_buffer[0] = 0x80;
             int ret = ControlSPI.VSI_WriteReadBytes(ControlSPI.VSI_USBSPI, DevIndex, 0, write_buffer, 1, read_buffer, ReadLen);
@@ -150,7 +150,7 @@ namespace WindowsFormsApp1
                 MessageBox.Show("未选择设备", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            btn_OPT_NOW_Click(null, null);
+            //btn_OPT_NOW_Click(null, null);
             Byte AddresToRead = Convert.ToByte(textBoxReadRegAddress.Text,16);
             write_buffer[0] = AddresToRead;
             int ret = ControlSPI.VSI_WriteReadBytes(ControlSPI.VSI_USBSPI, DevIndex, 0, write_buffer, 1, read_buffer, 1);
