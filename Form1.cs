@@ -132,7 +132,7 @@ namespace WindowsFormsApp1
                 for (int i = 0; i < ReadLen; i++)
                 {
                     richTextBox1.AppendText($"地址{i.ToString("X2")}:0x{read_buffer[i].ToString("X2")}");
-                    if ((i + 1) % 4 == 0)
+                    if ((i + 1) % ColumNum == 0)
                     {
                         richTextBox1.AppendText("\n");
                     }
