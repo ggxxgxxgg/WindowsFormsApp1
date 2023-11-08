@@ -299,7 +299,7 @@ namespace WindowsFormsApp1
             {
                 write_buffer[i + 2] = device.reg[i];
             }
-            int ret = ControlSPI.VSI_WriteBytes(ControlSPI.VSI_USBSPI, DevIndex, 0, write_buffer, 0x1f + 2);
+            int ret = ControlSPI.VSI_WriteBytes(ControlSPI.VSI_USBSPI, DevIndex, 0, write_buffer, 0x1f + 3);
             if (ret != ControlSPI.ERROR.SUCCESS)
             {
                 MessageBox.Show("软写 错误", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -313,7 +313,7 @@ namespace WindowsFormsApp1
                 {
                     richTextBox1.AppendText("地址" + readAddress.ToString("X2") + ":");
                     richTextBox1.AppendText("0x" + device.reg[i].ToString("X2"));
-                    if (i % 2 == 0)
+                    if ((i + 1) % 6 == 0)
                     {
                         richTextBox1.AppendText("\n");
                     }
@@ -332,11 +332,11 @@ namespace WindowsFormsApp1
             write_buffer[0] = 0x00;
             write_buffer[1] = 0xaa;
             device.reg[0] = (Byte)((device.reg[0] & ~(7 << 5)) | (2 << 5));
-            for (int i = 0; i < 0x1f; i++)
+            for (int i = 0; i <= 0x1f; i++)
             {
                 write_buffer[i + 2] = device.reg[i];
             }
-            int ret = ControlSPI.VSI_WriteBytes(ControlSPI.VSI_USBSPI, DevIndex, 0, write_buffer, 0x1f + 2);
+            int ret = ControlSPI.VSI_WriteBytes(ControlSPI.VSI_USBSPI, DevIndex, 0, write_buffer, 0x1f + 3);
             if (ret != ControlSPI.ERROR.SUCCESS)
             {
                 MessageBox.Show("硬写 错误", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -346,11 +346,11 @@ namespace WindowsFormsApp1
             {
                 richTextBox1.AppendText("\n硬写\n");
                 int readAddress = 0;
-                for (int i = 0; i < 0x1f; i++)
+                for (int i = 0; i <= 0x1f; i++)
                 {
                     richTextBox1.AppendText("地址" + readAddress.ToString("X2") + ":");
                     richTextBox1.AppendText("0x" + device.reg[i].ToString("X2"));
-                    if (i % 2 == 0)
+                    if ((i + 1) % 6 == 0)
                     {
                         richTextBox1.AppendText("\n");
                     }
@@ -802,7 +802,7 @@ namespace WindowsFormsApp1
             {
                 richTextBox1.AppendText("地址" + i.ToString("X2") + ":");
                 richTextBox1.AppendText("0x" + device.reg[i].ToString("X2"));
-                if (i % 2 == 0)
+                if ((i + 1) % 6 == 0)
                 {
                     richTextBox1.AppendText("\n");
                 }
@@ -820,9 +820,9 @@ namespace WindowsFormsApp1
                 MessageBox.Show("未选择设备", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            btn_OPT_NOW_Click(null, null);
+            //btn_OPT_NOW_Click(null, null);
             write_buffer[0] = 0x80;
-            int ret = ControlSPI.VSI_WriteReadBytes(ControlSPI.VSI_USBSPI, DevIndex, 0, write_buffer, 1, read_buffer, 0x1f);
+            int ret = ControlSPI.VSI_WriteReadBytes(ControlSPI.VSI_USBSPI, DevIndex, 0, write_buffer, 1, read_buffer, 0x1f+1);
             if (ret != ControlSPI.ERROR.SUCCESS)
             {
                 MessageBox.Show("读所有寄存器", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -836,7 +836,7 @@ namespace WindowsFormsApp1
                 {
                     richTextBox1.AppendText("地址" + readAddress.ToString("X2") + ":");
                     richTextBox1.AppendText("0x" + read_buffer[i].ToString("X2"));
-                    if (i % 2 == 0)
+                    if (i % 4 == 0)
                     {
                         richTextBox1.AppendText("\n");
                     }

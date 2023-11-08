@@ -65,22 +65,12 @@ namespace WindowsFormsApp1
             this.label20 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.cBox_config_TLPFIEN = new System.Windows.Forms.ComboBox();
-            this.label31 = new System.Windows.Forms.Label();
-            this.cBox_config_TPGA = new System.Windows.Forms.ComboBox();
-            this.label30 = new System.Windows.Forms.Label();
-            this.cBox_config_TC2VOEN = new System.Windows.Forms.ComboBox();
             this.label25 = new System.Windows.Forms.Label();
             this.textBox_OrderA = new System.Windows.Forms.TextBox();
             this.textBox_YMW = new System.Windows.Forms.TextBox();
-            this.label29 = new System.Windows.Forms.Label();
-            this.cBox_config_TP2IEN = new System.Windows.Forms.ComboBox();
             this.label28 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
-            this.cBox_config_TICACEN = new System.Windows.Forms.ComboBox();
             this.textBox_OrderS = new System.Windows.Forms.TextBox();
-            this.label26 = new System.Windows.Forms.Label();
             this.cBox_config_OPHS = new System.Windows.Forms.ComboBox();
             this.cBox_config_SOEN = new System.Windows.Forms.ComboBox();
             this.label15 = new System.Windows.Forms.Label();
@@ -101,6 +91,16 @@ namespace WindowsFormsApp1
             this.cBox_config_VTST = new System.Windows.Forms.ComboBox();
             this.label17 = new System.Windows.Forms.Label();
             this.cBox_config_PRTRM = new System.Windows.Forms.ComboBox();
+            this.cBox_config_TLPFIEN = new System.Windows.Forms.ComboBox();
+            this.label31 = new System.Windows.Forms.Label();
+            this.cBox_config_TPGA = new System.Windows.Forms.ComboBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.cBox_config_TC2VOEN = new System.Windows.Forms.ComboBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.cBox_config_TP2IEN = new System.Windows.Forms.ComboBox();
+            this.label27 = new System.Windows.Forms.Label();
+            this.cBox_config_TICACEN = new System.Windows.Forms.ComboBox();
+            this.label26 = new System.Windows.Forms.Label();
             this.btn_importValue = new System.Windows.Forms.Button();
             this.btn_saveValue = new System.Windows.Forms.Button();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
@@ -516,50 +516,6 @@ namespace WindowsFormsApp1
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "TCMPEN值";
             // 
-            // cBox_config_TLPFIEN
-            // 
-            this.cBox_config_TLPFIEN.FormattingEnabled = true;
-            this.cBox_config_TLPFIEN.Location = new System.Drawing.Point(6, 89);
-            this.cBox_config_TLPFIEN.Name = "cBox_config_TLPFIEN";
-            this.cBox_config_TLPFIEN.Size = new System.Drawing.Size(58, 23);
-            this.cBox_config_TLPFIEN.TabIndex = 63;
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("宋体", 9F);
-            this.label31.Location = new System.Drawing.Point(3, 72);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(117, 15);
-            this.label31.TabIndex = 62;
-            this.label31.Text = "LPF测试TLPFIEN";
-            // 
-            // cBox_config_TPGA
-            // 
-            this.cBox_config_TPGA.FormattingEnabled = true;
-            this.cBox_config_TPGA.Location = new System.Drawing.Point(6, 133);
-            this.cBox_config_TPGA.Name = "cBox_config_TPGA";
-            this.cBox_config_TPGA.Size = new System.Drawing.Size(58, 23);
-            this.cBox_config_TPGA.TabIndex = 61;
-            // 
-            // label30
-            // 
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("宋体", 9F);
-            this.label30.Location = new System.Drawing.Point(3, 116);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(93, 15);
-            this.label30.TabIndex = 60;
-            this.label30.Text = "PGA测试TPGA";
-            // 
-            // cBox_config_TC2VOEN
-            // 
-            this.cBox_config_TC2VOEN.FormattingEnabled = true;
-            this.cBox_config_TC2VOEN.Location = new System.Drawing.Point(160, 89);
-            this.cBox_config_TC2VOEN.Name = "cBox_config_TC2VOEN";
-            this.cBox_config_TC2VOEN.Size = new System.Drawing.Size(58, 23);
-            this.cBox_config_TC2VOEN.TabIndex = 59;
-            // 
             // label25
             // 
             this.label25.AutoSize = true;
@@ -585,24 +541,6 @@ namespace WindowsFormsApp1
             this.textBox_YMW.Size = new System.Drawing.Size(112, 25);
             this.textBox_YMW.TabIndex = 37;
             // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("宋体", 9F);
-            this.label29.Location = new System.Drawing.Point(157, 71);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(117, 15);
-            this.label29.TabIndex = 58;
-            this.label29.Text = "C2V测试TC2VOEN";
-            // 
-            // cBox_config_TP2IEN
-            // 
-            this.cBox_config_TP2IEN.FormattingEnabled = true;
-            this.cBox_config_TP2IEN.Location = new System.Drawing.Point(160, 40);
-            this.cBox_config_TP2IEN.Name = "cBox_config_TP2IEN";
-            this.cBox_config_TP2IEN.Size = new System.Drawing.Size(58, 23);
-            this.cBox_config_TP2IEN.TabIndex = 57;
-            // 
             // label28
             // 
             this.label28.AutoSize = true;
@@ -612,16 +550,6 @@ namespace WindowsFormsApp1
             this.label28.Size = new System.Drawing.Size(60, 15);
             this.label28.TabIndex = 52;
             this.label28.Text = "序列号A";
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("宋体", 9F);
-            this.label27.Location = new System.Drawing.Point(157, 22);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(115, 15);
-            this.label27.TabIndex = 56;
-            this.label27.Text = "外部输入TP2IEN";
             // 
             // label24
             // 
@@ -633,14 +561,6 @@ namespace WindowsFormsApp1
             this.label24.TabIndex = 38;
             this.label24.Text = "序列号S";
             // 
-            // cBox_config_TICACEN
-            // 
-            this.cBox_config_TICACEN.FormattingEnabled = true;
-            this.cBox_config_TICACEN.Location = new System.Drawing.Point(6, 40);
-            this.cBox_config_TICACEN.Name = "cBox_config_TICACEN";
-            this.cBox_config_TICACEN.Size = new System.Drawing.Size(58, 23);
-            this.cBox_config_TICACEN.TabIndex = 55;
-            // 
             // textBox_OrderS
             // 
             this.textBox_OrderS.Location = new System.Drawing.Point(13, 84);
@@ -648,16 +568,6 @@ namespace WindowsFormsApp1
             this.textBox_OrderS.Size = new System.Drawing.Size(112, 25);
             this.textBox_OrderS.TabIndex = 39;
             this.textBox_OrderS.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_OrderS_KeyPress);
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Font = new System.Drawing.Font("宋体", 9F);
-            this.label26.Location = new System.Drawing.Point(3, 22);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(140, 15);
-            this.label26.TabIndex = 54;
-            this.label26.Text = "ASIC变电容TICACEN";
             // 
             // cBox_config_OPHS
             // 
@@ -851,6 +761,96 @@ namespace WindowsFormsApp1
             this.cBox_config_PRTRM.Name = "cBox_config_PRTRM";
             this.cBox_config_PRTRM.Size = new System.Drawing.Size(58, 23);
             this.cBox_config_PRTRM.TabIndex = 41;
+            // 
+            // cBox_config_TLPFIEN
+            // 
+            this.cBox_config_TLPFIEN.FormattingEnabled = true;
+            this.cBox_config_TLPFIEN.Location = new System.Drawing.Point(6, 89);
+            this.cBox_config_TLPFIEN.Name = "cBox_config_TLPFIEN";
+            this.cBox_config_TLPFIEN.Size = new System.Drawing.Size(58, 23);
+            this.cBox_config_TLPFIEN.TabIndex = 63;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("宋体", 9F);
+            this.label31.Location = new System.Drawing.Point(3, 72);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(117, 15);
+            this.label31.TabIndex = 62;
+            this.label31.Text = "LPF测试TLPFIEN";
+            // 
+            // cBox_config_TPGA
+            // 
+            this.cBox_config_TPGA.FormattingEnabled = true;
+            this.cBox_config_TPGA.Location = new System.Drawing.Point(6, 133);
+            this.cBox_config_TPGA.Name = "cBox_config_TPGA";
+            this.cBox_config_TPGA.Size = new System.Drawing.Size(58, 23);
+            this.cBox_config_TPGA.TabIndex = 61;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("宋体", 9F);
+            this.label30.Location = new System.Drawing.Point(3, 116);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(93, 15);
+            this.label30.TabIndex = 60;
+            this.label30.Text = "PGA测试TPGA";
+            // 
+            // cBox_config_TC2VOEN
+            // 
+            this.cBox_config_TC2VOEN.FormattingEnabled = true;
+            this.cBox_config_TC2VOEN.Location = new System.Drawing.Point(160, 89);
+            this.cBox_config_TC2VOEN.Name = "cBox_config_TC2VOEN";
+            this.cBox_config_TC2VOEN.Size = new System.Drawing.Size(58, 23);
+            this.cBox_config_TC2VOEN.TabIndex = 59;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("宋体", 9F);
+            this.label29.Location = new System.Drawing.Point(157, 71);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(117, 15);
+            this.label29.TabIndex = 58;
+            this.label29.Text = "C2V测试TC2VOEN";
+            // 
+            // cBox_config_TP2IEN
+            // 
+            this.cBox_config_TP2IEN.FormattingEnabled = true;
+            this.cBox_config_TP2IEN.Location = new System.Drawing.Point(160, 40);
+            this.cBox_config_TP2IEN.Name = "cBox_config_TP2IEN";
+            this.cBox_config_TP2IEN.Size = new System.Drawing.Size(58, 23);
+            this.cBox_config_TP2IEN.TabIndex = 57;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("宋体", 9F);
+            this.label27.Location = new System.Drawing.Point(157, 22);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(115, 15);
+            this.label27.TabIndex = 56;
+            this.label27.Text = "外部输入TP2IEN";
+            // 
+            // cBox_config_TICACEN
+            // 
+            this.cBox_config_TICACEN.FormattingEnabled = true;
+            this.cBox_config_TICACEN.Location = new System.Drawing.Point(6, 40);
+            this.cBox_config_TICACEN.Name = "cBox_config_TICACEN";
+            this.cBox_config_TICACEN.Size = new System.Drawing.Size(58, 23);
+            this.cBox_config_TICACEN.TabIndex = 55;
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Font = new System.Drawing.Font("宋体", 9F);
+            this.label26.Location = new System.Drawing.Point(3, 22);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(140, 15);
+            this.label26.TabIndex = 54;
+            this.label26.Text = "ASIC变电容TICACEN";
             // 
             // btn_importValue
             // 
