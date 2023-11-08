@@ -26,6 +26,7 @@ namespace WindowsFormsApp1
         Byte[] read_buffer = new Byte[10240];
         Device device = new Device();
         Config config = new Config();//配置文件
+        int ColumNum = 8;
         public Form1()
         {
             InitializeComponent();
@@ -313,7 +314,7 @@ namespace WindowsFormsApp1
                 {
                     richTextBox1.AppendText("地址" + readAddress.ToString("X2") + ":");
                     richTextBox1.AppendText("0x" + device.reg[i].ToString("X2"));
-                    if ((i + 1) % 6 == 0)
+                    if ((i + 1) % ColumNum == 0)
                     {
                         richTextBox1.AppendText("\n");
                     }
@@ -350,7 +351,7 @@ namespace WindowsFormsApp1
                 {
                     richTextBox1.AppendText("地址" + readAddress.ToString("X2") + ":");
                     richTextBox1.AppendText("0x" + device.reg[i].ToString("X2"));
-                    if ((i + 1) % 6 == 0)
+                    if ((i + 1) % ColumNum == 0)
                     {
                         richTextBox1.AppendText("\n");
                     }
@@ -802,7 +803,7 @@ namespace WindowsFormsApp1
             {
                 richTextBox1.AppendText("地址" + i.ToString("X2") + ":");
                 richTextBox1.AppendText("0x" + device.reg[i].ToString("X2"));
-                if ((i + 1) % 6 == 0)
+                if ((i + 1) % ColumNum == 0)
                 {
                     richTextBox1.AppendText("\n");
                 }
@@ -836,7 +837,7 @@ namespace WindowsFormsApp1
                 {
                     richTextBox1.AppendText("地址" + readAddress.ToString("X2") + ":");
                     richTextBox1.AppendText("0x" + read_buffer[i].ToString("X2"));
-                    if (i % 4 == 0)
+                    if ((i + 1) % ColumNum == 0)
                     {
                         richTextBox1.AppendText("\n");
                     }
@@ -851,7 +852,7 @@ namespace WindowsFormsApp1
 
         private void ReadRegByAddress(int address)
         {
-            btn_OPT_NOW_Click(null, null);
+            //btn_OPT_NOW_Click(null, null);
             //int readAddress = address + 128;
             write_buffer[0] = (byte)(address);
             int ret = ControlSPI.VSI_WriteReadBytes(ControlSPI.VSI_USBSPI, DevIndex, 0, write_buffer, 1, read_buffer, 1);

@@ -359,7 +359,7 @@ namespace WindowsFormsApp1
             // 
             this.richTextBox1.Location = new System.Drawing.Point(6, 24);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(1466, 371);
+            this.richTextBox1.Size = new System.Drawing.Size(1452, 371);
             this.richTextBox1.TabIndex = 8;
             this.richTextBox1.Text = "";
             // 
@@ -417,7 +417,7 @@ namespace WindowsFormsApp1
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("宋体", 9F);
-            this.label10.Location = new System.Drawing.Point(12, 294);
+            this.label10.Location = new System.Drawing.Point(111, 212);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(99, 15);
             this.label10.TabIndex = 2;
@@ -487,9 +487,7 @@ namespace WindowsFormsApp1
             // groupBox5
             // 
             this.groupBox5.Controls.Add(this.groupBox7);
-            this.groupBox5.Controls.Add(this.cBox_config_OSCF);
             this.groupBox5.Controls.Add(this.groupBox3);
-            this.groupBox5.Controls.Add(this.label10);
             this.groupBox5.Location = new System.Drawing.Point(284, 12);
             this.groupBox5.Name = "groupBox5";
             this.groupBox5.Size = new System.Drawing.Size(495, 350);
@@ -509,9 +507,9 @@ namespace WindowsFormsApp1
             this.groupBox7.Controls.Add(this.cBox_config_SOEN);
             this.groupBox7.Controls.Add(this.label15);
             this.groupBox7.Controls.Add(this.label13);
-            this.groupBox7.Location = new System.Drawing.Point(232, 27);
+            this.groupBox7.Location = new System.Drawing.Point(232, 24);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(254, 259);
+            this.groupBox7.Size = new System.Drawing.Size(254, 319);
             this.groupBox7.TabIndex = 53;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "TCMPEN值";
@@ -608,7 +606,7 @@ namespace WindowsFormsApp1
             // cBox_config_OSCF
             // 
             this.cBox_config_OSCF.FormattingEnabled = true;
-            this.cBox_config_OSCF.Location = new System.Drawing.Point(16, 314);
+            this.cBox_config_OSCF.Location = new System.Drawing.Point(115, 232);
             this.cBox_config_OSCF.Name = "cBox_config_OSCF";
             this.cBox_config_OSCF.Size = new System.Drawing.Size(58, 23);
             this.cBox_config_OSCF.TabIndex = 40;
@@ -616,7 +614,9 @@ namespace WindowsFormsApp1
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.label12);
+            this.groupBox3.Controls.Add(this.cBox_config_OSCF);
             this.groupBox3.Controls.Add(this.label14);
+            this.groupBox3.Controls.Add(this.label10);
             this.groupBox3.Controls.Add(this.cBox_config_TCMP);
             this.groupBox3.Controls.Add(this.cBox_config_LFBW);
             this.groupBox3.Controls.Add(this.label16);
@@ -635,7 +635,7 @@ namespace WindowsFormsApp1
             this.groupBox3.Controls.Add(this.cBox_config_PRTRM);
             this.groupBox3.Location = new System.Drawing.Point(7, 24);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(219, 262);
+            this.groupBox3.Size = new System.Drawing.Size(219, 319);
             this.groupBox3.TabIndex = 52;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "PDCHP值";
@@ -893,9 +893,9 @@ namespace WindowsFormsApp1
             this.groupBox6.Controls.Add(this.button_ReadReg_ByLen);
             this.groupBox6.Controls.Add(this.btn_stopStart);
             this.groupBox6.Controls.Add(this.btn_startStart);
-            this.groupBox6.Location = new System.Drawing.Point(1085, 20);
+            this.groupBox6.Location = new System.Drawing.Point(1071, 13);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(402, 342);
+            this.groupBox6.Size = new System.Drawing.Size(402, 349);
             this.groupBox6.TabIndex = 19;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "功能区";
@@ -1024,7 +1024,7 @@ namespace WindowsFormsApp1
             this.groupBox2.Controls.Add(this.button_ClearRichTextBox);
             this.groupBox2.Location = new System.Drawing.Point(9, 368);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1478, 451);
+            this.groupBox2.Size = new System.Drawing.Size(1464, 451);
             this.groupBox2.TabIndex = 21;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "输出信息";
@@ -1052,7 +1052,7 @@ namespace WindowsFormsApp1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1499, 826);
+            this.ClientSize = new System.Drawing.Size(1479, 826);
             this.Controls.Add(this.groupBox8);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label9);
@@ -1066,7 +1066,6 @@ namespace WindowsFormsApp1
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
             this.groupBox3.ResumeLayout(false);
