@@ -29,6 +29,8 @@ namespace WindowsFormsApp1
         int ColumNum = 8;//显示区域的列数
         bool CBRG_1 = false, CBRG_2 = false;
         bool CZRO_1 = false, CZRO_2 = false;
+        bool softWriteShowMsg = true;
+        bool hardWriteShowMsg = true;
         public Form1()
         {
             InitializeComponent();
@@ -316,21 +318,21 @@ namespace WindowsFormsApp1
             else
             {
                 richTextBox1.AppendText("\n软写\n");
-                int readAddress = 0;
-                for (int i = 0; i <= 0x1f; i++)
-                {
-                    richTextBox1.AppendText("地址" + readAddress.ToString("X2") + ":");
-                    richTextBox1.AppendText("0x" + device.reg[i].ToString("X2"));
-                    if ((i + 1) % ColumNum == 0)
-                    {
-                        richTextBox1.AppendText("\n");
-                    }
-                    else
-                    {
-                        richTextBox1.AppendText("\t");
-                    }
-                    readAddress++;
-                }
+                //int readAddress = 0;
+                //for (int i = 0; i <= 0x1f; i++)
+                //{
+                //    richTextBox1.AppendText("地址" + readAddress.ToString("X2") + ":");
+                //    richTextBox1.AppendText("0x" + device.reg[i].ToString("X2"));
+                //    if ((i + 1) % ColumNum == 0)
+                //    {
+                //        richTextBox1.AppendText("\n");
+                //    }
+                //    else
+                //    {
+                //        richTextBox1.AppendText("\t");
+                //    }
+                //    readAddress++;
+                //}
                 ReadRegAll();
             }
         }
@@ -352,27 +354,27 @@ namespace WindowsFormsApp1
             int ret = ControlSPI.VSI_WriteBytes(ControlSPI.VSI_USBSPI, DevIndex, 0, write_buffer, 0x1f + 3);
             if (ret != ControlSPI.ERROR.SUCCESS)
             {
-                MessageBox.Show("硬写 错误", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("硬写错误", "提示", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             else
             {
                 richTextBox1.AppendText("\n硬写\n");
-                int readAddress = 0;
-                for (int i = 0; i <= 0x1f; i++)
-                {
-                    richTextBox1.AppendText("地址" + readAddress.ToString("X2") + ":");
-                    richTextBox1.AppendText("0x" + device.reg[i].ToString("X2"));
-                    if ((i + 1) % ColumNum == 0)
-                    {
-                        richTextBox1.AppendText("\n");
-                    }
-                    else
-                    {
-                        richTextBox1.AppendText("\t");
-                    }
-                    readAddress++;
-                }
+                //int readAddress = 0;
+                //for (int i = 0; i <= 0x1f; i++)
+                //{
+                //    richTextBox1.AppendText("地址" + readAddress.ToString("X2") + ":");
+                //    richTextBox1.AppendText("0x" + device.reg[i].ToString("X2"));
+                //    if ((i + 1) % ColumNum == 0)
+                //    {
+                //        richTextBox1.AppendText("\n");
+                //    }
+                //    else
+                //    {
+                //        richTextBox1.AppendText("\t");
+                //    }
+                //    readAddress++;
+                //}
                 ReadRegAll();
             }
         }
@@ -441,7 +443,9 @@ namespace WindowsFormsApp1
                 richTextBox1.AppendText("\nCBRG自校准使能\n");
                 if(CBRG_1 && CBRG_2)
                 {
+                    softWriteShowMsg = false;
                     btn_softWrite_Click(null, null);
+                    softWriteShowMsg = true;
                     CBRG_1 = false;
                     CBRG_2 = false;
                     ret = ReadRegByAddress(4);
@@ -469,7 +473,9 @@ namespace WindowsFormsApp1
                 richTextBox1.AppendText("\nCZRO自校准使能\n");
                 if (CZRO_1 && CZRO_2)
                 {
+                    softWriteShowMsg = false;
                     btn_softWrite_Click(null, null);
+                    softWriteShowMsg = true;
                     CZRO_1 = false;
                     CZRO_2 = false;
                     ret = ReadRegByAddress(5);
@@ -897,7 +903,6 @@ namespace WindowsFormsApp1
                 MessageBox.Show("未选择设备", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
-            //btn_OPT_NOW_Click(null, null);
             write_buffer[0] = 0x80;
             int ret = ControlSPI.VSI_WriteReadBytes(ControlSPI.VSI_USBSPI, DevIndex, 0, write_buffer, 1, read_buffer, 0x1f+1);
             if (ret != ControlSPI.ERROR.SUCCESS)
@@ -907,21 +912,24 @@ namespace WindowsFormsApp1
             }
             else
             {
-                richTextBox1.AppendText("\n读所有寄存器\n");
-                int readAddress = 0;
-                for (int i = 0; i <= 0x1f; i++)
+                if (softWriteShowMsg)
                 {
-                    richTextBox1.AppendText("地址" + readAddress.ToString("X2") + ":");
-                    richTextBox1.AppendText("0x" + read_buffer[i].ToString("X2"));
-                    if ((i + 1) % ColumNum == 0)
+                    richTextBox1.AppendText("\n读所有寄存器\n");
+                    int readAddress = 0;
+                    for (int i = 0; i <= 0x1f; i++)
                     {
-                        richTextBox1.AppendText("\n");
+                        richTextBox1.AppendText("地址" + readAddress.ToString("X2") + ":");
+                        richTextBox1.AppendText("0x" + read_buffer[i].ToString("X2"));
+                        if ((i + 1) % ColumNum == 0)
+                        {
+                            richTextBox1.AppendText("\n");
+                        }
+                        else
+                        {
+                            richTextBox1.AppendText("\t");
+                        }
+                        readAddress++;
                     }
-                    else
-                    {
-                        richTextBox1.AppendText("\t");
-                    }
-                    readAddress++;
                 }
             }
         }
