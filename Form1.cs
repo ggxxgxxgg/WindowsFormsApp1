@@ -26,7 +26,9 @@ namespace WindowsFormsApp1
         Byte[] read_buffer = new Byte[10240];
         Device device = new Device();
         Config config = new Config();//配置文件
-        int ColumNum = 8;
+        int ColumNum = 8;//显示区域的列数
+        bool CBRG_1 = false, CBRG_2 = false;
+        bool CZRO_1 = false, CZRO_2 = false;
         public Form1()
         {
             InitializeComponent();
@@ -293,6 +295,11 @@ namespace WindowsFormsApp1
         /// <param name="e"></param>
         private void btn_softWrite_Click(object sender, EventArgs e)
         {
+            if (DevIndex == -1)
+            {
+                MessageBox.Show("未选择设备", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
             SaveConfigValueToReg();
             write_buffer[0] = 0x00;//地址
             write_buffer[1] = 0x11;//数据
@@ -303,7 +310,7 @@ namespace WindowsFormsApp1
             int ret = ControlSPI.VSI_WriteBytes(ControlSPI.VSI_USBSPI, DevIndex, 0, write_buffer, 0x1f + 3);
             if (ret != ControlSPI.ERROR.SUCCESS)
             {
-                MessageBox.Show("软写 错误", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("软写失败", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             else
@@ -329,6 +336,11 @@ namespace WindowsFormsApp1
         }
         private void btn_hardWrite_Click(object sender, EventArgs e)
         {
+            if (DevIndex == -1)
+            {
+                MessageBox.Show("未选择设备", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
             SaveConfigValueToReg();
             write_buffer[0] = 0x00;
             write_buffer[1] = 0xaa;
@@ -383,31 +395,95 @@ namespace WindowsFormsApp1
         {
             write_buffer[0] = 0x00;
             write_buffer[1] = 0x21;
-            ControlSPI.VSI_WriteBytes(ControlSPI.VSI_USBSPI, DevIndex, 0, write_buffer, 2);
-            ReadRegByAddress(4);
+            int ret = ControlSPI.VSI_WriteBytes(ControlSPI.VSI_USBSPI, DevIndex, 0, write_buffer, 2);
+            if (ret != ControlSPI.ERROR.SUCCESS)
+            {
+                MessageBox.Show("CBRG电容桥自校准失败", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else
+            {
+                CBRG_1 = true;
+                richTextBox1.AppendText("\nCBRG电容桥自校准\n");
+            }
         }
 
         private void btn_CZRO_Click(object sender, EventArgs e)
         {
             write_buffer[0] = 0x00;
             write_buffer[1] = 0x22;
-            ControlSPI.VSI_WriteBytes(ControlSPI.VSI_USBSPI, DevIndex, 0, write_buffer, 2);
-            ReadRegByAddress(5);
-            ReadRegByAddress(6);
+            int ret = ControlSPI.VSI_WriteBytes(ControlSPI.VSI_USBSPI, DevIndex, 0, write_buffer, 2);
+            if (ret != ControlSPI.ERROR.SUCCESS)
+            {
+                MessageBox.Show("CZRO零电容自校准失败", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else
+            {
+                CZRO_1 = true;
+                richTextBox1.AppendText("\nCZRO零电容自校准\n");
+            }
         }
 
         private void btn_CBRG_enable_Click(object sender, EventArgs e)
         {
             write_buffer[0] = 0x00;
             write_buffer[1] = 0x23;
-            ControlSPI.VSI_WriteBytes(ControlSPI.VSI_USBSPI, DevIndex, 0, write_buffer, 2);
+            int ret = ControlSPI.VSI_WriteBytes(ControlSPI.VSI_USBSPI, DevIndex, 0, write_buffer, 2);
+            if (ret != ControlSPI.ERROR.SUCCESS)
+            {
+                MessageBox.Show("CBRG自校准使能失败", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else
+            {
+                CBRG_2 = true;
+                richTextBox1.AppendText("\nCBRG自校准使能\n");
+                if(CBRG_1 && CBRG_2)
+                {
+                    btn_softWrite_Click(null, null);
+                    CBRG_1 = false;
+                    CBRG_2 = false;
+                    ret = ReadRegByAddress(4);
+                    if(ret != -1)
+                    {
+                        richTextBox1.AppendText($"\nCBRG:0x{ret.ToString("X2")}\n");
+                    }
+                }
+            }
         }
 
         private void btn_CZRO_enable_Click(object sender, EventArgs e)
         {
             write_buffer[0] = 0x00;
             write_buffer[1] = 0x24;
-            ControlSPI.VSI_WriteBytes(ControlSPI.VSI_USBSPI, DevIndex, 0, write_buffer, 2);
+            int ret = ControlSPI.VSI_WriteBytes(ControlSPI.VSI_USBSPI, DevIndex, 0, write_buffer, 2);
+            if (ret != ControlSPI.ERROR.SUCCESS)
+            {
+                MessageBox.Show("CZRO自校准使能失败", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else
+            {
+                CZRO_2 = true;
+                richTextBox1.AppendText("\nCZRO自校准使能\n");
+                if (CZRO_1 && CZRO_2)
+                {
+                    btn_softWrite_Click(null, null);
+                    CZRO_1 = false;
+                    CZRO_2 = false;
+                    ret = ReadRegByAddress(5);
+                    if (ret != -1)
+                    {
+                        int t = ReadRegByAddress(6);
+                        if (t != -1)
+                        {
+                            richTextBox1.AppendText($"\nCZRO[8]:0x{ret.ToString("X2")}\n");
+                            richTextBox1.AppendText($"\nCZRO[7..0]:0x{t.ToString("X2")}\n");
+                        }
+                    }
+                }
+            }
         }
 
         private void btn_OPT_LSB_Click(object sender, EventArgs e)
@@ -850,22 +926,21 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void ReadRegByAddress(int address)
+        private int ReadRegByAddress(int address)
         {
-            //btn_OPT_NOW_Click(null, null);
-            //int readAddress = address + 128;
             write_buffer[0] = (byte)(address);
             int ret = ControlSPI.VSI_WriteReadBytes(ControlSPI.VSI_USBSPI, DevIndex, 0, write_buffer, 1, read_buffer, 1);
             if (ret != ControlSPI.ERROR.SUCCESS)
             {
                 MessageBox.Show("读单个寄存器", "错误", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
+                return -1;
             }
             else
             {
                 richTextBox1.AppendText("\n读单个寄存器\n");
                 richTextBox1.AppendText("地址" + address.ToString("X2") + ":");
                 richTextBox1.AppendText("0x" + read_buffer[0].ToString("X2"));
+                return read_buffer[0];
             }
         }
 
@@ -906,5 +981,6 @@ namespace WindowsFormsApp1
                 readAddress++;
             }
         }
+
     }
 }

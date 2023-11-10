@@ -64,33 +64,31 @@ namespace WindowsFormsApp1
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.label20 = new System.Windows.Forms.Label();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.label25 = new System.Windows.Forms.Label();
-            this.textBox_OrderA = new System.Windows.Forms.TextBox();
-            this.textBox_YMW = new System.Windows.Forms.TextBox();
-            this.label28 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.textBox_OrderS = new System.Windows.Forms.TextBox();
-            this.cBox_config_OPHS = new System.Windows.Forms.ComboBox();
-            this.cBox_config_SOEN = new System.Windows.Forms.ComboBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.cBox_config_OSCF = new System.Windows.Forms.ComboBox();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.cBox_config_TCMP = new System.Windows.Forms.ComboBox();
+            this.textBox_YMW = new System.Windows.Forms.TextBox();
+            this.textBox_OrderA = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
             this.cBox_config_LFBW = new System.Windows.Forms.ComboBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.textBox_OrderS = new System.Windows.Forms.TextBox();
+            this.cBox_config_SOEN = new System.Windows.Forms.ComboBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.cBox_config_OPHS = new System.Windows.Forms.ComboBox();
             this.cBox_config_FVGA = new System.Windows.Forms.ComboBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
             this.cBox_config_CVGA = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.cBox_config_CZRO = new System.Windows.Forms.ComboBox();
-            this.label23 = new System.Windows.Forms.Label();
-            this.cBox_config_CBRG = new System.Windows.Forms.ComboBox();
-            this.label22 = new System.Windows.Forms.Label();
-            this.cBox_config_BGST = new System.Windows.Forms.ComboBox();
             this.label21 = new System.Windows.Forms.Label();
-            this.cBox_config_VTST = new System.Windows.Forms.ComboBox();
-            this.label17 = new System.Windows.Forms.Label();
+            this.cBox_config_CZRO = new System.Windows.Forms.ComboBox();
+            this.cBox_config_OSCF = new System.Windows.Forms.ComboBox();
             this.cBox_config_PRTRM = new System.Windows.Forms.ComboBox();
+            this.cBox_config_CBRG = new System.Windows.Forms.ComboBox();
+            this.cBox_config_VTST = new System.Windows.Forms.ComboBox();
+            this.cBox_config_BGST = new System.Windows.Forms.ComboBox();
             this.cBox_config_TLPFIEN = new System.Windows.Forms.ComboBox();
             this.label31 = new System.Windows.Forms.Label();
             this.cBox_config_TPGA = new System.Windows.Forms.ComboBox();
@@ -121,8 +119,6 @@ namespace WindowsFormsApp1
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox5.SuspendLayout();
-            this.groupBox7.SuspendLayout();
-            this.groupBox3.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox8.SuspendLayout();
@@ -130,9 +126,9 @@ namespace WindowsFormsApp1
             // 
             // button_SearchDev
             // 
-            this.button_SearchDev.Location = new System.Drawing.Point(172, 16);
+            this.button_SearchDev.Location = new System.Drawing.Point(151, 16);
             this.button_SearchDev.Name = "button_SearchDev";
-            this.button_SearchDev.Size = new System.Drawing.Size(91, 40);
+            this.button_SearchDev.Size = new System.Drawing.Size(106, 40);
             this.button_SearchDev.TabIndex = 0;
             this.button_SearchDev.Text = "搜索设备";
             this.button_SearchDev.UseVisualStyleBackColor = true;
@@ -141,16 +137,16 @@ namespace WindowsFormsApp1
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(85, 23);
+            this.comboBox1.Location = new System.Drawing.Point(79, 23);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(54, 23);
+            this.comboBox1.Size = new System.Drawing.Size(66, 23);
             this.comboBox1.TabIndex = 1;
             // 
             // button_OpenDev
             // 
-            this.button_OpenDev.Location = new System.Drawing.Point(6, 62);
+            this.button_OpenDev.Location = new System.Drawing.Point(151, 62);
             this.button_OpenDev.Name = "button_OpenDev";
-            this.button_OpenDev.Size = new System.Drawing.Size(91, 40);
+            this.button_OpenDev.Size = new System.Drawing.Size(106, 40);
             this.button_OpenDev.TabIndex = 2;
             this.button_OpenDev.Text = "打开设备";
             this.button_OpenDev.UseVisualStyleBackColor = true;
@@ -185,7 +181,7 @@ namespace WindowsFormsApp1
             this.groupBox1.Controls.Add(this.comboBox3);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.comboBox2);
-            this.groupBox1.Location = new System.Drawing.Point(6, 108);
+            this.groupBox1.Location = new System.Drawing.Point(8, 108);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(255, 235);
             this.groupBox1.TabIndex = 4;
@@ -330,9 +326,9 @@ namespace WindowsFormsApp1
             // 
             // button_InitSpi
             // 
-            this.button_InitSpi.Location = new System.Drawing.Point(172, 62);
+            this.button_InitSpi.Location = new System.Drawing.Point(9, 62);
             this.button_InitSpi.Name = "button_InitSpi";
-            this.button_InitSpi.Size = new System.Drawing.Size(91, 40);
+            this.button_InitSpi.Size = new System.Drawing.Size(106, 40);
             this.button_InitSpi.TabIndex = 5;
             this.button_InitSpi.Text = "初始化SPI";
             this.button_InitSpi.UseVisualStyleBackColor = true;
@@ -340,7 +336,7 @@ namespace WindowsFormsApp1
             // 
             // button_ReadReg_ByLen
             // 
-            this.button_ReadReg_ByLen.Location = new System.Drawing.Point(80, 244);
+            this.button_ReadReg_ByLen.Location = new System.Drawing.Point(99, 246);
             this.button_ReadReg_ByLen.Name = "button_ReadReg_ByLen";
             this.button_ReadReg_ByLen.Size = new System.Drawing.Size(152, 40);
             this.button_ReadReg_ByLen.TabIndex = 6;
@@ -350,16 +346,16 @@ namespace WindowsFormsApp1
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(6, 254);
+            this.textBox1.Location = new System.Drawing.Point(16, 256);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(68, 25);
             this.textBox1.TabIndex = 7;
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(6, 24);
+            this.richTextBox1.Location = new System.Drawing.Point(15, 24);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(1452, 371);
+            this.richTextBox1.Size = new System.Drawing.Size(1213, 371);
             this.richTextBox1.TabIndex = 8;
             this.richTextBox1.Text = "";
             // 
@@ -367,7 +363,7 @@ namespace WindowsFormsApp1
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("宋体", 9F);
-            this.label8.Location = new System.Drawing.Point(3, 236);
+            this.label8.Location = new System.Drawing.Point(13, 238);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(67, 15);
             this.label8.TabIndex = 9;
@@ -377,7 +373,7 @@ namespace WindowsFormsApp1
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("宋体", 9F);
-            this.label18.Location = new System.Drawing.Point(112, 69);
+            this.label18.Location = new System.Drawing.Point(13, 140);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(84, 15);
             this.label18.TabIndex = 18;
@@ -387,7 +383,7 @@ namespace WindowsFormsApp1
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("宋体", 9F);
-            this.label16.Location = new System.Drawing.Point(6, 69);
+            this.label16.Location = new System.Drawing.Point(118, 81);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(99, 15);
             this.label16.TabIndex = 14;
@@ -397,7 +393,7 @@ namespace WindowsFormsApp1
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("宋体", 9F);
-            this.label14.Location = new System.Drawing.Point(112, 21);
+            this.label14.Location = new System.Drawing.Point(13, 81);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(99, 15);
             this.label14.TabIndex = 10;
@@ -407,7 +403,7 @@ namespace WindowsFormsApp1
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("宋体", 9F);
-            this.label12.Location = new System.Drawing.Point(6, 21);
+            this.label12.Location = new System.Drawing.Point(118, 24);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(107, 15);
             this.label12.TabIndex = 6;
@@ -417,7 +413,7 @@ namespace WindowsFormsApp1
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("宋体", 9F);
-            this.label10.Location = new System.Drawing.Point(111, 212);
+            this.label10.Location = new System.Drawing.Point(13, 26);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(99, 15);
             this.label10.TabIndex = 2;
@@ -425,7 +421,7 @@ namespace WindowsFormsApp1
             // 
             // button_ReadReg_Selected
             // 
-            this.button_ReadReg_Selected.Location = new System.Drawing.Point(80, 294);
+            this.button_ReadReg_Selected.Location = new System.Drawing.Point(100, 296);
             this.button_ReadReg_Selected.Name = "button_ReadReg_Selected";
             this.button_ReadReg_Selected.Size = new System.Drawing.Size(151, 40);
             this.button_ReadReg_Selected.TabIndex = 13;
@@ -436,7 +432,7 @@ namespace WindowsFormsApp1
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(3, 286);
+            this.label19.Location = new System.Drawing.Point(13, 288);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(67, 15);
             this.label19.TabIndex = 14;
@@ -444,7 +440,7 @@ namespace WindowsFormsApp1
             // 
             // textBoxReadRegAddress
             // 
-            this.textBoxReadRegAddress.Location = new System.Drawing.Point(6, 304);
+            this.textBoxReadRegAddress.Location = new System.Drawing.Point(16, 306);
             this.textBoxReadRegAddress.Name = "textBoxReadRegAddress";
             this.textBoxReadRegAddress.Size = new System.Drawing.Size(67, 25);
             this.textBoxReadRegAddress.TabIndex = 15;
@@ -452,7 +448,7 @@ namespace WindowsFormsApp1
             // 
             // button_ClearRichTextBox
             // 
-            this.button_ClearRichTextBox.Location = new System.Drawing.Point(6, 401);
+            this.button_ClearRichTextBox.Location = new System.Drawing.Point(15, 401);
             this.button_ClearRichTextBox.Name = "button_ClearRichTextBox";
             this.button_ClearRichTextBox.Size = new System.Drawing.Size(100, 40);
             this.button_ClearRichTextBox.TabIndex = 16;
@@ -478,7 +474,7 @@ namespace WindowsFormsApp1
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(12, 27);
+            this.label20.Location = new System.Drawing.Point(6, 27);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(67, 15);
             this.label20.TabIndex = 5;
@@ -486,188 +482,190 @@ namespace WindowsFormsApp1
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.groupBox7);
-            this.groupBox5.Controls.Add(this.groupBox3);
+            this.groupBox5.Controls.Add(this.label25);
+            this.groupBox5.Controls.Add(this.cBox_config_TCMP);
+            this.groupBox5.Controls.Add(this.textBox_YMW);
+            this.groupBox5.Controls.Add(this.textBox_OrderA);
+            this.groupBox5.Controls.Add(this.label17);
+            this.groupBox5.Controls.Add(this.label28);
+            this.groupBox5.Controls.Add(this.label14);
+            this.groupBox5.Controls.Add(this.cBox_config_LFBW);
+            this.groupBox5.Controls.Add(this.label24);
+            this.groupBox5.Controls.Add(this.label22);
+            this.groupBox5.Controls.Add(this.textBox_OrderS);
+            this.groupBox5.Controls.Add(this.label12);
+            this.groupBox5.Controls.Add(this.cBox_config_SOEN);
+            this.groupBox5.Controls.Add(this.label13);
+            this.groupBox5.Controls.Add(this.cBox_config_OPHS);
+            this.groupBox5.Controls.Add(this.cBox_config_FVGA);
+            this.groupBox5.Controls.Add(this.label15);
+            this.groupBox5.Controls.Add(this.label23);
+            this.groupBox5.Controls.Add(this.label16);
+            this.groupBox5.Controls.Add(this.cBox_config_CVGA);
+            this.groupBox5.Controls.Add(this.label18);
+            this.groupBox5.Controls.Add(this.label11);
+            this.groupBox5.Controls.Add(this.label21);
+            this.groupBox5.Controls.Add(this.cBox_config_CZRO);
+            this.groupBox5.Controls.Add(this.cBox_config_OSCF);
+            this.groupBox5.Controls.Add(this.label10);
+            this.groupBox5.Controls.Add(this.cBox_config_PRTRM);
+            this.groupBox5.Controls.Add(this.cBox_config_CBRG);
+            this.groupBox5.Controls.Add(this.cBox_config_VTST);
+            this.groupBox5.Controls.Add(this.cBox_config_BGST);
             this.groupBox5.Location = new System.Drawing.Point(284, 12);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(495, 350);
+            this.groupBox5.Size = new System.Drawing.Size(382, 350);
             this.groupBox5.TabIndex = 18;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "参数适配区";
-            // 
-            // groupBox7
-            // 
-            this.groupBox7.Controls.Add(this.label25);
-            this.groupBox7.Controls.Add(this.textBox_OrderA);
-            this.groupBox7.Controls.Add(this.textBox_YMW);
-            this.groupBox7.Controls.Add(this.label28);
-            this.groupBox7.Controls.Add(this.label24);
-            this.groupBox7.Controls.Add(this.textBox_OrderS);
-            this.groupBox7.Controls.Add(this.cBox_config_OPHS);
-            this.groupBox7.Controls.Add(this.cBox_config_SOEN);
-            this.groupBox7.Controls.Add(this.label15);
-            this.groupBox7.Controls.Add(this.label13);
-            this.groupBox7.Location = new System.Drawing.Point(232, 24);
-            this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(254, 319);
-            this.groupBox7.TabIndex = 53;
-            this.groupBox7.TabStop = false;
-            this.groupBox7.Text = "TCMPEN值";
             // 
             // label25
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("宋体", 9F);
-            this.label25.Location = new System.Drawing.Point(10, 114);
+            this.label25.Location = new System.Drawing.Point(239, 269);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(52, 15);
             this.label25.TabIndex = 36;
             this.label25.Text = "年月周";
             // 
+            // cBox_config_TCMP
+            // 
+            this.cBox_config_TCMP.FormattingEnabled = true;
+            this.cBox_config_TCMP.Location = new System.Drawing.Point(121, 289);
+            this.cBox_config_TCMP.Name = "cBox_config_TCMP";
+            this.cBox_config_TCMP.Size = new System.Drawing.Size(58, 23);
+            this.cBox_config_TCMP.TabIndex = 49;
+            // 
+            // textBox_YMW
+            // 
+            this.textBox_YMW.Location = new System.Drawing.Point(242, 287);
+            this.textBox_YMW.Name = "textBox_YMW";
+            this.textBox_YMW.Size = new System.Drawing.Size(110, 25);
+            this.textBox_YMW.TabIndex = 37;
+            // 
             // textBox_OrderA
             // 
-            this.textBox_OrderA.Location = new System.Drawing.Point(131, 84);
+            this.textBox_OrderA.Location = new System.Drawing.Point(242, 223);
             this.textBox_OrderA.Name = "textBox_OrderA";
             this.textBox_OrderA.Size = new System.Drawing.Size(110, 25);
             this.textBox_OrderA.TabIndex = 53;
             this.textBox_OrderA.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_OrderA_KeyPress);
             // 
-            // textBox_YMW
+            // label17
             // 
-            this.textBox_YMW.Location = new System.Drawing.Point(13, 132);
-            this.textBox_YMW.Name = "textBox_YMW";
-            this.textBox_YMW.Size = new System.Drawing.Size(112, 25);
-            this.textBox_YMW.TabIndex = 37;
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("宋体", 9F);
+            this.label17.Location = new System.Drawing.Point(118, 271);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(69, 15);
+            this.label17.TabIndex = 28;
+            this.label17.Text = "温补TCMP";
             // 
             // label28
             // 
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("宋体", 9F);
-            this.label28.Location = new System.Drawing.Point(128, 66);
+            this.label28.Location = new System.Drawing.Point(239, 205);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(60, 15);
             this.label28.TabIndex = 52;
             this.label28.Text = "序列号A";
             // 
+            // cBox_config_LFBW
+            // 
+            this.cBox_config_LFBW.FormattingEnabled = true;
+            this.cBox_config_LFBW.Location = new System.Drawing.Point(15, 289);
+            this.cBox_config_LFBW.Name = "cBox_config_LFBW";
+            this.cBox_config_LFBW.Size = new System.Drawing.Size(58, 23);
+            this.cBox_config_LFBW.TabIndex = 48;
+            // 
             // label24
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("宋体", 9F);
-            this.label24.Location = new System.Drawing.Point(10, 66);
+            this.label24.Location = new System.Drawing.Point(241, 138);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(60, 15);
             this.label24.TabIndex = 38;
             this.label24.Text = "序列号S";
             // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("宋体", 9F);
+            this.label22.Location = new System.Drawing.Point(13, 271);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(84, 15);
+            this.label22.TabIndex = 26;
+            this.label22.Text = "调带宽LFBW";
+            // 
             // textBox_OrderS
             // 
-            this.textBox_OrderS.Location = new System.Drawing.Point(13, 84);
+            this.textBox_OrderS.Location = new System.Drawing.Point(244, 156);
             this.textBox_OrderS.Name = "textBox_OrderS";
-            this.textBox_OrderS.Size = new System.Drawing.Size(112, 25);
+            this.textBox_OrderS.Size = new System.Drawing.Size(108, 25);
             this.textBox_OrderS.TabIndex = 39;
             this.textBox_OrderS.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_OrderS_KeyPress);
-            // 
-            // cBox_config_OPHS
-            // 
-            this.cBox_config_OPHS.FormattingEnabled = true;
-            this.cBox_config_OPHS.Location = new System.Drawing.Point(13, 38);
-            this.cBox_config_OPHS.Name = "cBox_config_OPHS";
-            this.cBox_config_OPHS.Size = new System.Drawing.Size(58, 23);
-            this.cBox_config_OPHS.TabIndex = 50;
             // 
             // cBox_config_SOEN
             // 
             this.cBox_config_SOEN.FormattingEnabled = true;
-            this.cBox_config_SOEN.Location = new System.Drawing.Point(131, 38);
+            this.cBox_config_SOEN.Location = new System.Drawing.Point(244, 99);
             this.cBox_config_SOEN.Name = "cBox_config_SOEN";
-            this.cBox_config_SOEN.Size = new System.Drawing.Size(58, 23);
+            this.cBox_config_SOEN.Size = new System.Drawing.Size(108, 23);
             this.cBox_config_SOEN.TabIndex = 51;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("宋体", 9F);
-            this.label15.Location = new System.Drawing.Point(10, 20);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(99, 15);
-            this.label15.TabIndex = 30;
-            this.label15.Text = "输出极性OPHS";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("宋体", 9F);
-            this.label13.Location = new System.Drawing.Point(128, 20);
+            this.label13.Location = new System.Drawing.Point(241, 81);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(77, 15);
             this.label13.TabIndex = 32;
             this.label13.Text = "单/差SOEN";
             // 
-            // cBox_config_OSCF
+            // cBox_config_OPHS
             // 
-            this.cBox_config_OSCF.FormattingEnabled = true;
-            this.cBox_config_OSCF.Location = new System.Drawing.Point(115, 232);
-            this.cBox_config_OSCF.Name = "cBox_config_OSCF";
-            this.cBox_config_OSCF.Size = new System.Drawing.Size(58, 23);
-            this.cBox_config_OSCF.TabIndex = 40;
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.label12);
-            this.groupBox3.Controls.Add(this.cBox_config_OSCF);
-            this.groupBox3.Controls.Add(this.label14);
-            this.groupBox3.Controls.Add(this.label10);
-            this.groupBox3.Controls.Add(this.cBox_config_TCMP);
-            this.groupBox3.Controls.Add(this.cBox_config_LFBW);
-            this.groupBox3.Controls.Add(this.label16);
-            this.groupBox3.Controls.Add(this.cBox_config_FVGA);
-            this.groupBox3.Controls.Add(this.label18);
-            this.groupBox3.Controls.Add(this.cBox_config_CVGA);
-            this.groupBox3.Controls.Add(this.label11);
-            this.groupBox3.Controls.Add(this.cBox_config_CZRO);
-            this.groupBox3.Controls.Add(this.label23);
-            this.groupBox3.Controls.Add(this.cBox_config_CBRG);
-            this.groupBox3.Controls.Add(this.label22);
-            this.groupBox3.Controls.Add(this.cBox_config_BGST);
-            this.groupBox3.Controls.Add(this.label21);
-            this.groupBox3.Controls.Add(this.cBox_config_VTST);
-            this.groupBox3.Controls.Add(this.label17);
-            this.groupBox3.Controls.Add(this.cBox_config_PRTRM);
-            this.groupBox3.Location = new System.Drawing.Point(7, 24);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(219, 319);
-            this.groupBox3.TabIndex = 52;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "PDCHP值";
-            // 
-            // cBox_config_TCMP
-            // 
-            this.cBox_config_TCMP.FormattingEnabled = true;
-            this.cBox_config_TCMP.Location = new System.Drawing.Point(9, 230);
-            this.cBox_config_TCMP.Name = "cBox_config_TCMP";
-            this.cBox_config_TCMP.Size = new System.Drawing.Size(58, 23);
-            this.cBox_config_TCMP.TabIndex = 49;
-            // 
-            // cBox_config_LFBW
-            // 
-            this.cBox_config_LFBW.FormattingEnabled = true;
-            this.cBox_config_LFBW.Location = new System.Drawing.Point(115, 185);
-            this.cBox_config_LFBW.Name = "cBox_config_LFBW";
-            this.cBox_config_LFBW.Size = new System.Drawing.Size(58, 23);
-            this.cBox_config_LFBW.TabIndex = 48;
+            this.cBox_config_OPHS.FormattingEnabled = true;
+            this.cBox_config_OPHS.Location = new System.Drawing.Point(244, 44);
+            this.cBox_config_OPHS.Name = "cBox_config_OPHS";
+            this.cBox_config_OPHS.Size = new System.Drawing.Size(108, 23);
+            this.cBox_config_OPHS.TabIndex = 50;
             // 
             // cBox_config_FVGA
             // 
             this.cBox_config_FVGA.FormattingEnabled = true;
-            this.cBox_config_FVGA.Location = new System.Drawing.Point(9, 182);
+            this.cBox_config_FVGA.Location = new System.Drawing.Point(121, 225);
             this.cBox_config_FVGA.Name = "cBox_config_FVGA";
             this.cBox_config_FVGA.Size = new System.Drawing.Size(58, 23);
             this.cBox_config_FVGA.TabIndex = 47;
             // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("宋体", 9F);
+            this.label15.Location = new System.Drawing.Point(241, 26);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(99, 15);
+            this.label15.TabIndex = 30;
+            this.label15.Text = "输出极性OPHS";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("宋体", 9F);
+            this.label23.Location = new System.Drawing.Point(118, 207);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(84, 15);
+            this.label23.TabIndex = 24;
+            this.label23.Text = "精增益FVGA";
+            // 
             // cBox_config_CVGA
             // 
             this.cBox_config_CVGA.FormattingEnabled = true;
-            this.cBox_config_CVGA.Location = new System.Drawing.Point(115, 135);
+            this.cBox_config_CVGA.Location = new System.Drawing.Point(15, 225);
             this.cBox_config_CVGA.Name = "cBox_config_CVGA";
             this.cBox_config_CVGA.Size = new System.Drawing.Size(58, 23);
             this.cBox_config_CVGA.TabIndex = 46;
@@ -676,96 +674,74 @@ namespace WindowsFormsApp1
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("宋体", 9F);
-            this.label11.Location = new System.Drawing.Point(6, 117);
+            this.label11.Location = new System.Drawing.Point(118, 143);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(84, 15);
             this.label11.TabIndex = 20;
             this.label11.Text = "零电容CZRO";
             // 
-            // cBox_config_CZRO
-            // 
-            this.cBox_config_CZRO.FormattingEnabled = true;
-            this.cBox_config_CZRO.Location = new System.Drawing.Point(9, 135);
-            this.cBox_config_CZRO.Name = "cBox_config_CZRO";
-            this.cBox_config_CZRO.Size = new System.Drawing.Size(58, 23);
-            this.cBox_config_CZRO.TabIndex = 45;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("宋体", 9F);
-            this.label23.Location = new System.Drawing.Point(6, 164);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(84, 15);
-            this.label23.TabIndex = 24;
-            this.label23.Text = "精增益FVGA";
-            // 
-            // cBox_config_CBRG
-            // 
-            this.cBox_config_CBRG.FormattingEnabled = true;
-            this.cBox_config_CBRG.Location = new System.Drawing.Point(115, 87);
-            this.cBox_config_CBRG.Name = "cBox_config_CBRG";
-            this.cBox_config_CBRG.Size = new System.Drawing.Size(58, 23);
-            this.cBox_config_CBRG.TabIndex = 44;
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("宋体", 9F);
-            this.label22.Location = new System.Drawing.Point(112, 167);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(84, 15);
-            this.label22.TabIndex = 26;
-            this.label22.Text = "调带宽LFBW";
-            // 
-            // cBox_config_BGST
-            // 
-            this.cBox_config_BGST.FormattingEnabled = true;
-            this.cBox_config_BGST.Location = new System.Drawing.Point(9, 87);
-            this.cBox_config_BGST.Name = "cBox_config_BGST";
-            this.cBox_config_BGST.Size = new System.Drawing.Size(58, 23);
-            this.cBox_config_BGST.TabIndex = 43;
-            // 
             // label21
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("宋体", 9F);
-            this.label21.Location = new System.Drawing.Point(112, 117);
+            this.label21.Location = new System.Drawing.Point(13, 207);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(84, 15);
             this.label21.TabIndex = 22;
             this.label21.Text = "粗增益CVGA";
             // 
-            // cBox_config_VTST
+            // cBox_config_CZRO
             // 
-            this.cBox_config_VTST.FormattingEnabled = true;
-            this.cBox_config_VTST.Location = new System.Drawing.Point(115, 41);
-            this.cBox_config_VTST.Name = "cBox_config_VTST";
-            this.cBox_config_VTST.Size = new System.Drawing.Size(58, 23);
-            this.cBox_config_VTST.TabIndex = 42;
+            this.cBox_config_CZRO.FormattingEnabled = true;
+            this.cBox_config_CZRO.Location = new System.Drawing.Point(121, 161);
+            this.cBox_config_CZRO.Name = "cBox_config_CZRO";
+            this.cBox_config_CZRO.Size = new System.Drawing.Size(58, 23);
+            this.cBox_config_CZRO.TabIndex = 45;
             // 
-            // label17
+            // cBox_config_OSCF
             // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("宋体", 9F);
-            this.label17.Location = new System.Drawing.Point(6, 212);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(69, 15);
-            this.label17.TabIndex = 28;
-            this.label17.Text = "温补TCMP";
+            this.cBox_config_OSCF.FormattingEnabled = true;
+            this.cBox_config_OSCF.Location = new System.Drawing.Point(15, 44);
+            this.cBox_config_OSCF.Name = "cBox_config_OSCF";
+            this.cBox_config_OSCF.Size = new System.Drawing.Size(58, 23);
+            this.cBox_config_OSCF.TabIndex = 40;
             // 
             // cBox_config_PRTRM
             // 
             this.cBox_config_PRTRM.FormattingEnabled = true;
-            this.cBox_config_PRTRM.Location = new System.Drawing.Point(9, 41);
+            this.cBox_config_PRTRM.Location = new System.Drawing.Point(121, 44);
             this.cBox_config_PRTRM.Name = "cBox_config_PRTRM";
             this.cBox_config_PRTRM.Size = new System.Drawing.Size(58, 23);
             this.cBox_config_PRTRM.TabIndex = 41;
             // 
+            // cBox_config_CBRG
+            // 
+            this.cBox_config_CBRG.FormattingEnabled = true;
+            this.cBox_config_CBRG.Location = new System.Drawing.Point(15, 161);
+            this.cBox_config_CBRG.Name = "cBox_config_CBRG";
+            this.cBox_config_CBRG.Size = new System.Drawing.Size(58, 23);
+            this.cBox_config_CBRG.TabIndex = 44;
+            // 
+            // cBox_config_VTST
+            // 
+            this.cBox_config_VTST.FormattingEnabled = true;
+            this.cBox_config_VTST.Location = new System.Drawing.Point(15, 99);
+            this.cBox_config_VTST.Name = "cBox_config_VTST";
+            this.cBox_config_VTST.Size = new System.Drawing.Size(58, 23);
+            this.cBox_config_VTST.TabIndex = 42;
+            // 
+            // cBox_config_BGST
+            // 
+            this.cBox_config_BGST.FormattingEnabled = true;
+            this.cBox_config_BGST.Location = new System.Drawing.Point(121, 99);
+            this.cBox_config_BGST.Name = "cBox_config_BGST";
+            this.cBox_config_BGST.Size = new System.Drawing.Size(58, 23);
+            this.cBox_config_BGST.TabIndex = 43;
+            // 
             // cBox_config_TLPFIEN
             // 
             this.cBox_config_TLPFIEN.FormattingEnabled = true;
-            this.cBox_config_TLPFIEN.Location = new System.Drawing.Point(6, 89);
+            this.cBox_config_TLPFIEN.Location = new System.Drawing.Point(16, 289);
             this.cBox_config_TLPFIEN.Name = "cBox_config_TLPFIEN";
             this.cBox_config_TLPFIEN.Size = new System.Drawing.Size(58, 23);
             this.cBox_config_TLPFIEN.TabIndex = 63;
@@ -774,7 +750,7 @@ namespace WindowsFormsApp1
             // 
             this.label31.AutoSize = true;
             this.label31.Font = new System.Drawing.Font("宋体", 9F);
-            this.label31.Location = new System.Drawing.Point(3, 72);
+            this.label31.Location = new System.Drawing.Point(13, 272);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(117, 15);
             this.label31.TabIndex = 62;
@@ -783,7 +759,7 @@ namespace WindowsFormsApp1
             // cBox_config_TPGA
             // 
             this.cBox_config_TPGA.FormattingEnabled = true;
-            this.cBox_config_TPGA.Location = new System.Drawing.Point(6, 133);
+            this.cBox_config_TPGA.Location = new System.Drawing.Point(16, 225);
             this.cBox_config_TPGA.Name = "cBox_config_TPGA";
             this.cBox_config_TPGA.Size = new System.Drawing.Size(58, 23);
             this.cBox_config_TPGA.TabIndex = 61;
@@ -792,7 +768,7 @@ namespace WindowsFormsApp1
             // 
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("宋体", 9F);
-            this.label30.Location = new System.Drawing.Point(3, 116);
+            this.label30.Location = new System.Drawing.Point(13, 208);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(93, 15);
             this.label30.TabIndex = 60;
@@ -801,7 +777,7 @@ namespace WindowsFormsApp1
             // cBox_config_TC2VOEN
             // 
             this.cBox_config_TC2VOEN.FormattingEnabled = true;
-            this.cBox_config_TC2VOEN.Location = new System.Drawing.Point(160, 89);
+            this.cBox_config_TC2VOEN.Location = new System.Drawing.Point(16, 158);
             this.cBox_config_TC2VOEN.Name = "cBox_config_TC2VOEN";
             this.cBox_config_TC2VOEN.Size = new System.Drawing.Size(58, 23);
             this.cBox_config_TC2VOEN.TabIndex = 59;
@@ -810,7 +786,7 @@ namespace WindowsFormsApp1
             // 
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("宋体", 9F);
-            this.label29.Location = new System.Drawing.Point(157, 71);
+            this.label29.Location = new System.Drawing.Point(13, 140);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(117, 15);
             this.label29.TabIndex = 58;
@@ -819,7 +795,7 @@ namespace WindowsFormsApp1
             // cBox_config_TP2IEN
             // 
             this.cBox_config_TP2IEN.FormattingEnabled = true;
-            this.cBox_config_TP2IEN.Location = new System.Drawing.Point(160, 40);
+            this.cBox_config_TP2IEN.Location = new System.Drawing.Point(16, 99);
             this.cBox_config_TP2IEN.Name = "cBox_config_TP2IEN";
             this.cBox_config_TP2IEN.Size = new System.Drawing.Size(58, 23);
             this.cBox_config_TP2IEN.TabIndex = 57;
@@ -828,7 +804,7 @@ namespace WindowsFormsApp1
             // 
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("宋体", 9F);
-            this.label27.Location = new System.Drawing.Point(157, 22);
+            this.label27.Location = new System.Drawing.Point(13, 81);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(115, 15);
             this.label27.TabIndex = 56;
@@ -837,7 +813,7 @@ namespace WindowsFormsApp1
             // cBox_config_TICACEN
             // 
             this.cBox_config_TICACEN.FormattingEnabled = true;
-            this.cBox_config_TICACEN.Location = new System.Drawing.Point(6, 40);
+            this.cBox_config_TICACEN.Location = new System.Drawing.Point(16, 44);
             this.cBox_config_TICACEN.Name = "cBox_config_TICACEN";
             this.cBox_config_TICACEN.Size = new System.Drawing.Size(58, 23);
             this.cBox_config_TICACEN.TabIndex = 55;
@@ -846,7 +822,7 @@ namespace WindowsFormsApp1
             // 
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("宋体", 9F);
-            this.label26.Location = new System.Drawing.Point(3, 22);
+            this.label26.Location = new System.Drawing.Point(13, 26);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(140, 15);
             this.label26.TabIndex = 54;
@@ -854,9 +830,9 @@ namespace WindowsFormsApp1
             // 
             // btn_importValue
             // 
-            this.btn_importValue.Location = new System.Drawing.Point(295, 288);
+            this.btn_importValue.Location = new System.Drawing.Point(273, 296);
             this.btn_importValue.Name = "btn_importValue";
-            this.btn_importValue.Size = new System.Drawing.Size(92, 40);
+            this.btn_importValue.Size = new System.Drawing.Size(124, 35);
             this.btn_importValue.TabIndex = 55;
             this.btn_importValue.Text = "导入参数";
             this.btn_importValue.UseVisualStyleBackColor = true;
@@ -864,9 +840,9 @@ namespace WindowsFormsApp1
             // 
             // btn_saveValue
             // 
-            this.btn_saveValue.Location = new System.Drawing.Point(295, 244);
+            this.btn_saveValue.Location = new System.Drawing.Point(273, 247);
             this.btn_saveValue.Name = "btn_saveValue";
-            this.btn_saveValue.Size = new System.Drawing.Size(92, 40);
+            this.btn_saveValue.Size = new System.Drawing.Size(124, 33);
             this.btn_saveValue.TabIndex = 54;
             this.btn_saveValue.Text = "保存参数";
             this.btn_saveValue.UseVisualStyleBackColor = true;
@@ -893,18 +869,18 @@ namespace WindowsFormsApp1
             this.groupBox6.Controls.Add(this.button_ReadReg_ByLen);
             this.groupBox6.Controls.Add(this.btn_stopStart);
             this.groupBox6.Controls.Add(this.btn_startStart);
-            this.groupBox6.Location = new System.Drawing.Point(1071, 13);
+            this.groupBox6.Location = new System.Drawing.Point(840, 13);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(402, 349);
+            this.groupBox6.Size = new System.Drawing.Size(411, 349);
             this.groupBox6.TabIndex = 19;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "功能区";
             // 
             // btn_OPT_NOW
             // 
-            this.btn_OPT_NOW.Location = new System.Drawing.Point(6, 196);
+            this.btn_OPT_NOW.Location = new System.Drawing.Point(16, 198);
             this.btn_OPT_NOW.Name = "btn_OPT_NOW";
-            this.btn_OPT_NOW.Size = new System.Drawing.Size(192, 37);
+            this.btn_OPT_NOW.Size = new System.Drawing.Size(381, 37);
             this.btn_OPT_NOW.TabIndex = 30;
             this.btn_OPT_NOW.Text = "读区域选择/当前寄存器";
             this.btn_OPT_NOW.UseVisualStyleBackColor = true;
@@ -912,9 +888,9 @@ namespace WindowsFormsApp1
             // 
             // btn_OPT_MSB
             // 
-            this.btn_OPT_MSB.Location = new System.Drawing.Point(189, 153);
+            this.btn_OPT_MSB.Location = new System.Drawing.Point(212, 155);
             this.btn_OPT_MSB.Name = "btn_OPT_MSB";
-            this.btn_OPT_MSB.Size = new System.Drawing.Size(177, 37);
+            this.btn_OPT_MSB.Size = new System.Drawing.Size(185, 37);
             this.btn_OPT_MSB.TabIndex = 29;
             this.btn_OPT_MSB.Text = "读区域选择/OTP MSB\r\n";
             this.btn_OPT_MSB.UseVisualStyleBackColor = true;
@@ -922,9 +898,9 @@ namespace WindowsFormsApp1
             // 
             // btn_OPT_LSB
             // 
-            this.btn_OPT_LSB.Location = new System.Drawing.Point(6, 153);
+            this.btn_OPT_LSB.Location = new System.Drawing.Point(16, 155);
             this.btn_OPT_LSB.Name = "btn_OPT_LSB";
-            this.btn_OPT_LSB.Size = new System.Drawing.Size(177, 37);
+            this.btn_OPT_LSB.Size = new System.Drawing.Size(190, 37);
             this.btn_OPT_LSB.TabIndex = 28;
             this.btn_OPT_LSB.Text = "读区域选择/OTP LSB\r\n";
             this.btn_OPT_LSB.UseVisualStyleBackColor = true;
@@ -932,7 +908,7 @@ namespace WindowsFormsApp1
             // 
             // btn_hardWrite
             // 
-            this.btn_hardWrite.Location = new System.Drawing.Point(202, 24);
+            this.btn_hardWrite.Location = new System.Drawing.Point(305, 26);
             this.btn_hardWrite.Name = "btn_hardWrite";
             this.btn_hardWrite.Size = new System.Drawing.Size(92, 37);
             this.btn_hardWrite.TabIndex = 25;
@@ -942,7 +918,7 @@ namespace WindowsFormsApp1
             // 
             // btn_softWrite
             // 
-            this.btn_softWrite.Location = new System.Drawing.Point(295, 24);
+            this.btn_softWrite.Location = new System.Drawing.Point(212, 26);
             this.btn_softWrite.Name = "btn_softWrite";
             this.btn_softWrite.Size = new System.Drawing.Size(92, 37);
             this.btn_softWrite.TabIndex = 22;
@@ -952,9 +928,9 @@ namespace WindowsFormsApp1
             // 
             // btn_CZRO_enable
             // 
-            this.btn_CZRO_enable.Location = new System.Drawing.Point(163, 110);
+            this.btn_CZRO_enable.Location = new System.Drawing.Point(212, 109);
             this.btn_CZRO_enable.Name = "btn_CZRO_enable";
-            this.btn_CZRO_enable.Size = new System.Drawing.Size(151, 37);
+            this.btn_CZRO_enable.Size = new System.Drawing.Size(185, 37);
             this.btn_CZRO_enable.TabIndex = 21;
             this.btn_CZRO_enable.Text = "CZRO自校准使能";
             this.btn_CZRO_enable.UseVisualStyleBackColor = true;
@@ -962,9 +938,9 @@ namespace WindowsFormsApp1
             // 
             // btn_CZRO
             // 
-            this.btn_CZRO.Location = new System.Drawing.Point(163, 67);
+            this.btn_CZRO.Location = new System.Drawing.Point(212, 66);
             this.btn_CZRO.Name = "btn_CZRO";
-            this.btn_CZRO.Size = new System.Drawing.Size(151, 37);
+            this.btn_CZRO.Size = new System.Drawing.Size(185, 37);
             this.btn_CZRO.TabIndex = 20;
             this.btn_CZRO.Text = "CZRO零电容自校准";
             this.btn_CZRO.UseVisualStyleBackColor = true;
@@ -972,9 +948,9 @@ namespace WindowsFormsApp1
             // 
             // btn_CBRG_enable
             // 
-            this.btn_CBRG_enable.Location = new System.Drawing.Point(6, 110);
+            this.btn_CBRG_enable.Location = new System.Drawing.Point(16, 112);
             this.btn_CBRG_enable.Name = "btn_CBRG_enable";
-            this.btn_CBRG_enable.Size = new System.Drawing.Size(151, 37);
+            this.btn_CBRG_enable.Size = new System.Drawing.Size(190, 37);
             this.btn_CBRG_enable.TabIndex = 19;
             this.btn_CBRG_enable.Text = "CBRG自校准使能";
             this.btn_CBRG_enable.UseVisualStyleBackColor = true;
@@ -982,9 +958,9 @@ namespace WindowsFormsApp1
             // 
             // btn_CBRG
             // 
-            this.btn_CBRG.Location = new System.Drawing.Point(6, 67);
+            this.btn_CBRG.Location = new System.Drawing.Point(16, 69);
             this.btn_CBRG.Name = "btn_CBRG";
-            this.btn_CBRG.Size = new System.Drawing.Size(151, 37);
+            this.btn_CBRG.Size = new System.Drawing.Size(190, 37);
             this.btn_CBRG.TabIndex = 18;
             this.btn_CBRG.Text = "CBRG电容桥自校准";
             this.btn_CBRG.UseVisualStyleBackColor = true;
@@ -992,7 +968,7 @@ namespace WindowsFormsApp1
             // 
             // btn_stopStart
             // 
-            this.btn_stopStart.Location = new System.Drawing.Point(104, 24);
+            this.btn_stopStart.Location = new System.Drawing.Point(114, 26);
             this.btn_stopStart.Name = "btn_stopStart";
             this.btn_stopStart.Size = new System.Drawing.Size(92, 37);
             this.btn_stopStart.TabIndex = 17;
@@ -1002,7 +978,7 @@ namespace WindowsFormsApp1
             // 
             // btn_startStart
             // 
-            this.btn_startStart.Location = new System.Drawing.Point(6, 24);
+            this.btn_startStart.Location = new System.Drawing.Point(16, 26);
             this.btn_startStart.Name = "btn_startStart";
             this.btn_startStart.Size = new System.Drawing.Size(92, 37);
             this.btn_startStart.TabIndex = 16;
@@ -1024,7 +1000,7 @@ namespace WindowsFormsApp1
             this.groupBox2.Controls.Add(this.button_ClearRichTextBox);
             this.groupBox2.Location = new System.Drawing.Point(9, 368);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1464, 451);
+            this.groupBox2.Size = new System.Drawing.Size(1242, 451);
             this.groupBox2.TabIndex = 21;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "输出信息";
@@ -1041,9 +1017,9 @@ namespace WindowsFormsApp1
             this.groupBox8.Controls.Add(this.cBox_config_TICACEN);
             this.groupBox8.Controls.Add(this.label29);
             this.groupBox8.Controls.Add(this.label27);
-            this.groupBox8.Location = new System.Drawing.Point(785, 12);
+            this.groupBox8.Location = new System.Drawing.Point(672, 12);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(280, 350);
+            this.groupBox8.Size = new System.Drawing.Size(162, 350);
             this.groupBox8.TabIndex = 22;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "测试Debug区";
@@ -1052,7 +1028,7 @@ namespace WindowsFormsApp1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1479, 826);
+            this.ClientSize = new System.Drawing.Size(1264, 826);
             this.Controls.Add(this.groupBox8);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.label9);
@@ -1066,10 +1042,7 @@ namespace WindowsFormsApp1
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.groupBox5.ResumeLayout(false);
-            this.groupBox7.ResumeLayout(false);
-            this.groupBox7.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
+            this.groupBox5.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             this.groupBox6.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -1150,8 +1123,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.ComboBox cBox_config_SOEN;
         private System.Windows.Forms.TextBox textBox_OrderS;
         private System.Windows.Forms.TextBox textBox_YMW;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.TextBox textBox_OrderA;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.Button btn_hardWrite;
