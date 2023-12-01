@@ -9,6 +9,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Ginkgo;
@@ -338,6 +339,8 @@ namespace WindowsFormsApp1
         }
         private void btn_hardWrite_Click(object sender, EventArgs e)
         {
+
+
             if (DevIndex == -1)
             {
                 MessageBox.Show("未选择设备", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -360,22 +363,26 @@ namespace WindowsFormsApp1
             else
             {
                 richTextBox1.AppendText("\n硬写\n");
-                //int readAddress = 0;
-                //for (int i = 0; i <= 0x1f; i++)
-                //{
-                //    richTextBox1.AppendText("地址" + readAddress.ToString("X2") + ":");
-                //    richTextBox1.AppendText("0x" + device.reg[i].ToString("X2"));
-                //    if ((i + 1) % ColumNum == 0)
-                //    {
-                //        richTextBox1.AppendText("\n");
-                //    }
-                //    else
-                //    {
-                //        richTextBox1.AppendText("\t");
-                //    }
-                //    readAddress++;
-                //}
-                ReadRegAll();
+                Task task = Task.Factory.StartNew(() =>
+                {
+                    Task.Delay(10000);
+                    ReadRegAll();
+                });
+                //    //int readAddress = 0;
+                //    //for (int i = 0; i <= 0x1f; i++)
+                //    //{
+                //    //    richTextBox1.AppendText("地址" + readAddress.ToString("X2") + ":");
+                //    //    richTextBox1.AppendText("0x" + device.reg[i].ToString("X2"));
+                //    //    if ((i + 1) % ColumNum == 0)
+                //    //    {
+                //    //        richTextBox1.AppendText("\n");
+                //    //    }
+                //    //    else
+                //    //    {
+                //    //        richTextBox1.AppendText("\t");
+                //    //    }
+                //    //    readAddress++;
+                //    //}
             }
         }
 
